@@ -1,0 +1,289 @@
+/*******************************************************/
+/* CSS-Animationen für Header*/
+/*******************************************************/
+
+
+@media (prefers-reduced-motion: no-preference) { /* WICHTIG! Da manche Leute wegen Motion Sickness Animationen auf geringer in ihrem Browser eingestellt haben */
+  .CTA-container {
+      animation: fade-in ease-in-out forwards;
+      animation-timeline: view();
+      animation-range: cover -200px;
+  /* view() ist - Animation startet wenn sie in den viewport kommt und ist zudende am Ende des Viewports
+  scroll() ist - Animation startet am anfang des kompletten Screens und endet am Ende des Screens zB sinnvoll bei scroll-watcher
+   in den Klammern ist der Offset! - wann die Animation beginnen soll bzw enden- also Verzögerung
+   Zweite Möglichkeit hierzu ist *animation-range* property - mit pixeleingabe / cover / contain / entry / exit Möglichkeiten  */
+  }
+}
+  
+/* Keyframes zur Kontrolle der Animationen */
+
+@keyframes fade-in {
+  from {
+      opacity: 0; scale: .6;
+  }
+  to {
+      opacity: 1; scale: 1;
+  }
+}
+
+/* Hero_Section*/
+
+@keyframes fade-out {
+  from {opacity:1;}
+  to {opacity:0;}
+}
+
+.hero-innerdiv-index {
+  z-index: 1;
+  animation: fade-out linear;
+  animation-timeline: view();
+  animation-range: exit -200px; /* muss anfangs sichtbar sein also range: exit und 200px offset negativ nach unten */
+}
+
+
+
+@keyframes header-img-anim {
+  80%, 100% {opacity:0; scale: 2}
+}
+.hero-image img, #einzelbeitrag-hero{
+  z-index: -1;
+  animation: header-img-anim linear forwards;
+  animation-timeline:view();
+  animation-range: exit;
+}
+  
+  
+  
+  
+/*******************************************************/
+/* CSS-Animationen für fruit-slider auf index.html  */
+/*******************************************************/
+  
+@media (prefers-reduced-motion: no-preference) {
+  .fruit-item {
+      animation: autoInfinite 10s linear infinite;
+      animation-delay: calc(1s * (var(--position) - 1));
+  }
+}
+  
+@keyframes autoInfinite {
+  from {
+      left: 100%;
+  }
+  to {
+      left: -100px;
+  }
+}
+
+.fruit-slider:hover .fruit-item {
+  animation-play-state: paused !important; /* Animation pausiert am Desktop wenn mit der Maus ein Hover darüber stattfindet */
+}
+  
+  
+
+/*******************************************************/
+/* Style für Preloader  */
+/*******************************************************/
+  
+/* Preloader-Stile */
+.preload {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: black;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  animation: overlayAnimation 4s ease forwards;
+}
+
+@keyframes overlayAnimation {
+  0% {
+  opacity: 1;
+  }
+  75% {
+  opacity: 1;
+  }
+  100% {
+  opacity: 0;
+  pointer-events: none;
+  }
+}
+
+
+  .preload-hidden {
+  opacity: 0;
+  }
+  
+  .rectangle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideDown 4s forwards;
+  }
+  
+  .content {
+  text-align: center;
+  color: white;
+  }
+  
+  .logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+  }
+  
+  .quote {
+  font-size: 32px;
+  }
+  
+  @keyframes slideDown {
+  0% {
+      transform: translateY(-100%);
+  }
+  50% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(100%);
+  }
+  }
+  
+  /*Animation für den Text */
+  .quote, .logo {
+  animation: fadeInOut 4s forwards;
+  }
+  
+  @keyframes fadeInOut {
+  0% {
+      opacity: 0;
+  }
+  10% {
+      opacity: 1;
+  }
+  90% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+  }
+  
+  
+  
+  /*****************************/
+  /* SVG-ANIM BLOG*/
+  /****************************/
+  
+  #heart {
+    width: 50px;
+    stroke: black;
+    stroke-width: .15rem;
+    fill: transparent;
+    border: .35rem solid black;
+    border-radius: .5rem;
+    padding: .5rem;
+    stroke-dasharray: 56;
+    stroke-dashoffset: 56;
+    animation: 2s ease-in forwards like,
+    1s linear 2s 2 heartbeat; /* 1s Animation / linear / 2s delay und 2x animieren - animation heartbeat laut keyframes */
+    cursor: pointer;
+  }
+  
+  
+  #heart.unlike {
+    animation: 2s ease-out forwards unlike;
+  }
+  
+  @keyframes like {
+    0% {
+       stroke-dashoffset: 56;
+       fill: transparent;
+    }
+    100% {
+       stroke-dashoffset: 0;
+       fill:red;
+    }
+    }
+  
+  @keyframes heartbeat {
+    0% {
+       transform: scale(1,1)
+    }
+    50% {
+       transform: scale(0.9,0.9)
+    }
+    100% {
+       transform: scale(1,1)
+    }
+  }
+  
+  @keyframes unlike {
+    0% {
+       stroke-dashoffset: 0;
+       fill: transparent;
+    }
+    30% {
+       stroke-dashoffset: 0;
+       fill: darkgrey;
+    }
+    100% {
+       stroke-dashoffset: 0;
+       fill:transparent;
+    }
+    }
+  
+  
+    #share {
+       width: 70px;
+       stroke: black;
+       stroke-width: .12rem;
+       stroke-dasharray: 64.3;
+       stroke-dashoffset: 0;
+       cursor: pointer;
+       animation: 2s linear forwards share;
+    }
+    
+    #share.unshare {
+       animation: 2s ease-out forwards unshare;
+    }
+  
+  
+  
+    @keyframes share {
+       0% {
+          stroke-dashoffset: 64.3;
+          fill: transparent;
+       }
+       100% {
+          stroke-dashoffset: 0;
+          fill:red;
+       }
+       }
+  
+       
+  @keyframes unshare {
+    0% {
+       fill: transparent;
+       rotate: (180deg);
+    }
+    30% {
+       fill: darkgrey;
+    }
+    100% {
+       fill:transparent;
+       rotate:(360deg);
+    }
+    }
+  
+  
+  
+  

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<!--head -> Metadaten-->
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Titel der Website (Browserleiste)-->
+    <title>Ernährungsberatung N-Coach Preisübersicht</title>
+    <!-- META-Tags und Keywords zur SEO und Suchmaschinenoptimierung-->
+    <meta name="description" content="Professionelle Ernährungsberatung von N-Coach. Entdecken Sie unsere Angebote, Preise und nützliche Online-Tools für Ihre Gesundheit.">
+    <meta name="keywords" content="Ernährungsberatung, N-Coach, Gesundheit, BMI-Rechner, Kalorienumsatz">
+    <!--Integration Stylesheet für Style-Reset // Menü und Footer == allgemeine universelle Teile der Website die auf jeder Unterseite uniform sind-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--Integration Stylesheet für Haupt-Content-->
+    <link rel="stylesheet" type="text/css" href="style_content.css">
+    <!--Integration Stylesheet für Animationen-->
+    <link rel="stylesheet" type="text/css" href="style_animation.css">
+    <!--Integration Custom Font Urbanist von Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Urbanist:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+</head>
+
+<!--Referenzprototypen: https://www.figma.com/design/EpNcYbKYQRF6bK2N2UK2Wr/Konzept_WebProgrammierung?node-id=0%3A1&t=qgl6HhmTJ96EKTPb-1"-->
+
+<body>
+
+    <header role="banner">
+        <!--Nav-Bar inklusive Logo-->  
+            <nav class="nav-container" aria-label = "Hauptnavigation">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img src="icons/n-coach-logo.png" alt="n-coach-logo">
+                    </a>
+                </div>
+    
+                <a href="#" class="hamburger" aria-label = "Menü öffnen">
+                    <img src="icons/hamburger.png" alt="hamburger-menue-icon">
+                </a>
+    
+                <div class="nav-elements">
+                    <ul>
+                        <li><a href="index.html" >HOME</a></li>
+                        <li><a href="about.html">ÜBER MICH</a></li>
+                        <li><a href="offers.html">ANGEBOTE</a></li>
+                        <li><a href="pricelist.html" aria-current="page">PREISE</a></li>
+                        <li><a href="blog_apfelmueller.html">BLOG</a></li>
+                        <li><a href="online-tools.html">ONLINE-TOOLS</a></li>
+                        <li><a href="contact.html">KONTAKT</a></li>
+                    </ul>
+                </div>
+            </nav>
+    </header>
+    
+
+    <main role="main">
+        <!--Hero-Section Bild/Illustration-->  
+        <div class="hero-image">
+            <img src="images/header_prices.webp" alt="Gemüse welches auf einem Holzbrett geschnitten wird">
+        </div>
+
+
+        <!--Überschrift-->
+        <div class="centered_text" aria-labelledby="preishead">
+            <h1 class="headings" id="preishead">PREISÜBERSICHT</h1>
+        </div>
+
+        <!--Preistabelle-->
+        <table class="preis_tabelle" aria-label="Preisübersichtstabelle">
+            <tr>
+                <th role="columnheader">Leistung</th>
+                <th role="columnheader">Dauer</th>
+                <th role="columnheader">Preis in €</th>
+            </tr>
+            <tr>
+                <td role="cell">Einzelberatung</td>
+                <td role="cell">50 min.</td>
+                <td role="cell">60€</td>
+            </tr>
+            <tr>
+                <td role="cell">Einzelberatung</td>
+                <td role="cell">10 min.</td>
+                <td role="cell">100€</td>
+            </tr>
+            <tr>
+                <td role="cell">Familienberatung</td>
+                <td role="cell">50 min.</td>
+                <td role="cell">80€</td>
+            </tr>
+            <tr>
+                <td role="cell">Einkaufsberatung</td>
+                <td role="cell">50 min.</td>
+                <td role="cell">80€</td>
+            </tr>
+            <tr>
+                <td role="cell">BIA-Körperanalyse</td>
+                <td role="cell">30 min.</td>
+                <td role="cell">80€ <span>inkl.Auswertung</span> </td>
+            </tr>
+            <tr>
+                <td role="cell">Vorträge</td>
+                <td role="cell">Individuell</td>
+                <td role="cell">Auf Anfrage</td>
+            </tr>
+            <tr>
+                <td role="cell">Anfahrtstaxe für Hausbesuche</td>
+                <td role="cell">Individuell</td>
+                <td> role="cell"2€/10km</td>
+            </tr>
+        </table>
+
+
+        <!--Überschrift-->
+        <div class="centered_text" aria-labelledby="gutscheinhead">
+            <h1 class="headings" id="gutscheinhead">GUTSCHEINE</h1>
+        </div>
+        <!--Zusatzerklärung-->
+        <h2 class="bold-headings-2 headinggutscheine">Beschenke deine Liebsten mit einem Gutschein von mir! <br>
+            Es kann wahlweise ein Angebot gebucht werden, aber auch ein Wertgutschein ausgestellt werden.</h2>
+        <!--Abbildung Coaching-Gutschein-->
+        <div class = "gutschein-img">
+            <img src="images/coaching_gutschein.webp" alt="Coaching Gutschein als Geschenksidee">
+        </div>
+
+
+
+        <!--Überschrift-->
+        <div class="centered_text" aria-labelledby="headtestimonials">
+            <h1 class="headings" id="headtestimonials">WAS MEINE KUNDEN SAGEN....</h1>
+        </div>
+        
+        <!--Kundentestimonials bestehend aus Bild und Text -  mit Möglichkeit zum weiterklicken - links/rechts Icons-->
+        <div class="testimonials-container">
+            <div class="testimonials-inside">
+                <div id="testimonial_1" class="media-element">
+                    <img class="testimonial_image" src="images/testimonial_image_1.webp" alt="Kundentestimonial Portrait eines Mannes">
+                    <div class = "highlight_div_left">
+                        <img class="highlight_left" src="icons/highlight_top.png" alt="textauszeichnung">
+                    </div>
+                    <p class="paragraph-text-testimonial">
+                    Ich bin begeistert von den Ergebnissen! Die individuelle Aufmerksamkeit und die praktischen Ratschläge haben 
+                    mir geholfen, meine Ernährung umzustellen und meine Energie zu steigern. Ich fühle mich großartig und motiviert, 
+                    weiterhin gesunde Entscheidungen zu treffen. <br> <br> ~Jonas W.~
+                    </p>
+                    <div class = "highlight_div_right">
+                        <img class="highlight_right" src="icons/highlight_bottom.png" alt="textauszeichnung">
+                    </div>
+                </div>
+                <div id="testimonial_2" class="media-element">
+                    <img class="testimonial_image" src="images/testimonial_image_2.webp" alt="Kundentestimonial Portrait einer Frau">
+                    <div class = "highlight_div_left">
+                        <img class="highlight_left" src="icons/highlight_top.png" alt="textauszeichnung">
+                    </div>
+                    <p class="paragraph-text-testimonial">
+                    Einfach der Wahnsinn vielen Dank!
+                    Eine lohnende Investition in meine Gesundheit! 
+                    Samantha versteht wirklich, wie man individuelle Bedürfnisse anspricht.
+                    Mit ihrer Hilfe habe ich gelernt, mich besser zu ernähren und fühle mich jetzt stärker und gesünder denn je.
+                    <br> <br> ~Julia B.~
+                    </p>
+                    <div class = "highlight_div_right">
+                        <img class="highlight_right" src="icons/highlight_bottom.png" alt="textauszeichnung">
+                    </div>
+                </div>
+
+                <div id="testimonial_3" class="media-element">
+                    <img class="testimonial_image" src="images/testimonial_image_3.webp" alt="Kundentestimonial Mann mit Kaffeetasse in der Hand">
+                    <div class = "highlight_div_left">
+                        <img class="highlight_left" src="icons/highlight_top.png" alt="textauszeichnung">
+                    </div>
+                    <p class="paragraph-text-testimonial">
+                        Fantastische Ergebnisse!
+                        Dank der persönlichen Betreuung und maßgeschneiderten Ernährungspläne habe ich meine Ziele 
+                        erreicht und fühle mich besser als je zuvor.
+                        Ich war skeptisch, aber die Ergebnisse sprechen für sich. <br> <br> ~Tommy Z.~
+                        </p>
+                    <div class = "highlight_div_right">
+                        <img class="highlight_right" src="icons/highlight_bottom.png" alt="textauszeichnung">
+                    </div>
+                </div>
+                <div class="testimonials-nav">
+                    <img class="icon-testimonials-left" src="icons/icons-impressionen_left.png" alt="nav-icon-left">
+                    <img class="icon-testimonials-right" src="icons/icons-impressionen_right.png" alt="nav-icon-right">
+                </div>
+            </div>
+        </div>
+
+        <!--Social-Media Icons-->
+        <!-- noopener und noreffer Integration um Sicherheit zu gewährleisten indem eink neuer Tab geöffnet wird bei Klick des Links und verhindert
+         damit dass die Seite mit window.opener direkt auf der Seite geöffnet wird was ein potentielles Sicherheitsrisiko darstellt - kann zudem Performance verbessern-->
+         <div class="social-media-container" aria-label="Social Media Links">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <img class="social-media" src="icons/facebook_icon.png" alt="Facebook Icon">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <img class="social-media" src="icons/instagram_icon.png" alt="Instagram Icon">
+            </a>
+            <a href="https://at.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <img class="social-media" src="icons/linkedin_icon.png" alt="LinkedIn Icon">
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="Youtube">
+                <img class="social-media" src="icons/youtube_icon.png" alt="Youtube Icon">
+            </a>
+        </div>
+    </main>
+
+<!--Footer 1te Ebene mit Logo/Kontakt/Kontakt-CTA/Newsletteranmeldung-->
+    <footer>
+        <div class="footer-1-container">
+            <div class="inner-footer-1">
+                <img src="icons/n-coach-logo-small.png" alt="N-Coach Logo Kleinformat">
+            </div>
+            <div class="inner-footer-2">
+                <h3 class="headings-3">KONTAKT</h3>
+                <p class="paragraph-text p-contact-footer">Email: samantha@n-coach.at <br> Adresse: Habelberg 1 <br> 0000 Herzösterreich <br>Telefon: 0043/1234567
+                </p>
+            </div>
+            <div class="inner-footer-3">
+                <h3 class="headings-3">JETZT KONTAKT AUFNEHMEN</h3>
+                <p class="paragraph-text">Du hast Fragen oder möchtest einen Termin buchen? Ich bin für Anfragen jederzeit verfügbar.
+                </p>
+                <a href = "contact.html">
+                    <button class="button-cta" role="button">ZUM KONTAKTFORMULAR</button>
+                </a>
+            </div>
+            <div class="inner-footer-4">
+                <h3 class="headings-3">NEWSLETTERANMELDUNG</h3>
+                <p class="paragraph-text">Jetzt für den Newsletter eintragen und keine News mehr verpassen!
+                </p>
+                <form id="news-form-general" action="send.php" method="post" aria-label = "Newsletter-Anmeldung">
+                    <div class = "form-news-general-inside">
+                        <input type="email" name="email" placeholder="Deine Mail..." required aria-label="Email eingeben">
+                        <button id="button-news-general" type="submit" alt="Absenden">ANMELDEN</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!--Footer 2te Ebene-->
+        <div class="footer-2-container">
+            <div class="inner-footer-left">
+                <p class="paragraph-small">Copyright Julian Fritz 2024</p>
+            </div>
+            <div class="inner-footer-right">
+                <a class="paragraph-small" href="#" aria-label="Allgemeine Geschäftsbedingungen">AGB</a>
+                <a class="paragraph-small" href="#" aria-label="Impressum">Impressum</a>
+                <a class="paragraph-small" href="#" aria-label="Datenschutzerklärung">Datenschutz</a>
+            </div>
+        </div>
+        <!--Up-To-Top-Button-->
+        <a id="uptotop" href="#" aria-label="Nach oben scrollen">
+            <img src="icons/up_to_top_icon.png" alt="Up-to-Top-Button">
+        </a>
+    </footer>
+
+    <!--Javascript-Einbindung-->
+    <script src="app.js"></script>
+    <script src="pricelist.js"></script>
+</body>
+</html>

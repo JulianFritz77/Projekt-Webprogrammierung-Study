@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<!--head -> Metadaten-->
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Titel der Website (Browserleiste)-->
+    <title>Ernährungsberatung N-Coach Homepage</title>
+    <!-- META-Tags und Keywords zur SEO und Suchmaschinenoptimierung-->
+    <meta name="description" content="Professionelle Ernährungsberatung von N-Coach. Entdecken Sie unsere Angebote, Preise und nützliche Online-Tools für Ihre Gesundheit.">
+    <meta name="keywords" content="Ernährungsberatung, N-Coach, Gesundheit, BMI-Rechner, Kalorienumsatz">
+    <!--Integration Stylesheet für Style-Reset // Menü und Footer == allgemeine universelle Teile der Website die auf jeder Unterseite uniform sind-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--Integration Stylesheet für Haupt-Content-->
+    <link rel="stylesheet" type="text/css" href="style_content.css">
+    <!--Integration Stylesheet für Animationen-->
+    <link rel="stylesheet" type="text/css" href="style_animation.css">
+    <!--Integration Custom Font Urbanist von Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Urbanist:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+</head>
+
+<!--Referenzprototypen: https://www.figma.com/design/EpNcYbKYQRF6bK2N2UK2Wr/Konzept_WebProgrammierung?node-id=0%3A1&t=qgl6HhmTJ96EKTPb-1"-->
+
+<body>
+
+    <header role="banner">
+        <!--Nav-Bar inklusive Logo-->  
+            <nav class="nav-container" aria-label = "Hauptnavigation">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img src="icons/n-coach-logo.png" alt="n-coach-logo">
+                    </a>
+                </div>
+    
+                <a href="#" class="hamburger" aria-label = "Menü öffnen">
+                    <img src="icons/hamburger.png" alt="hamburger-menue-icon">
+                </a>
+    
+                <div class="nav-elements">
+                    <ul>
+                        <li><a href="index.html" aria-current="page">HOME</a></li>
+                        <li><a href="about.html">ÜBER MICH</a></li>
+                        <li><a href="offers.html">ANGEBOTE</a></li>
+                        <li><a href="pricelist.html">PREISE</a></li>
+                        <li><a href="blog_apfelmueller.html">BLOG</a></li>
+                        <li><a href="online-tools.html">ONLINE-TOOLS</a></li>
+                        <li><a href="contact.html">KONTAKT</a></li>
+                    </ul>
+                </div>
+            </nav>
+    </header>
+    
+    <main role="main">
+        <section class = "hero-sec" aria-labelledby="hero-heading">
+            <div class = "hero-innerdiv-index">
+                <h1 class = "h1-hero-index" id="hero-heading">Ich helfe dir auf deinem Weg <br> in eine gesündere Zukunft</h1>
+                <a href = "contact.html"><button class = "button-cta">JETZT INFORMIEREN</button></a>
+            </div>
+            <!--Hero-Section Bild-->  
+            <div class="hero-image">
+                <img src="images/index-header.webp" alt="Titelbild der Startseite">
+            </div>
+        </section>
+
+        <!--Überschrift + Einleitungstext-->
+        <div class="einleitung" aria-labelledby="intro-heading">
+            <h1 class="headings" id="intro-heading">N-COACH-ERNÄHRUNGSBERATUNG</h1>
+            <p class="paragraph-text">Herzlich Willkommen! Ich freue mich, dass du hier bist! Mein Name ist Samantha Apfelmüller und ich bin ein Nutrition-Coach aus dem Herzen Österreichs. 
+            </br>Ich helfe dir dabei, wissenschaftlich fundierte und individuelle Lösungsstrategien zum Erreichen deiner persönlichen Ziele zu finden. 
+            Im Zentrum meiner Beratung stehst DU. Denn ein “one-fits-all Modell” gibt es nicht - Jeder Mensch steht in einer anderen Lebenssituation, hat andere Vorlieben und Wünsche und steht vor persönlichen Herausforderungen.
+            All dies muss für eine erfolgreiche Strategieerarbeitung mitbeachtet werden. Erarbeite gemeinsam mit mir DEINE STRATEGIE -  </br> um eine langfristig durchführbare Änderung deiner Essgewohnheiten zu entwickeln. Gemeinsam finden wir einen Weg um nachhaltige, ausgewogene und gesunde Ernährung auch in deinen Alltag zu integrieren.
+            </p>
+        </div>
+
+        <!--Überschrift + Aktuelles News Bild mit Unterüberschrift/Text/Button-->
+        <div class="centered_text" aria-labelledby="news-heading">
+            <h1 class="headings" id="news-heading">AKTUELLE NEWS</h1>
+        </div>
+    
+        <div class="aktuelle-news-container">
+            <div class="left-news">
+                <img src="images/index-news-vortragsreihe.webp" alt="Vortragsreihe: Gesunder Start in den Tag">
+            </div>
+            <div class="right-news">
+                <h2 class="headings-2">VORTRAGSREIHE "GESUNDER START IN DEN TAG"</h2>
+                 <p class="paragraph-text">Am 01.07.2024 bin ich im Design-Center in Linz mit einem Vortrag zum “Gesunden Start in den Tag” vertreten. Dies markiert den Start meiner Vortragsreihe zu diesem Thema - in Zentren in ganz Österreich.
+                Jetzt für den Newsletter anmelden und Up-To-Date bleiben zu den nächsten Terminen!
+                </p>
+                <a href="contact.html">
+                    <button class="button-cta" role="button" >JETZT ANMELDEN</button>
+                </a>
+            </div>
+        </div>
+
+        <!--Überschrift + 4 Angebotsbilder inkl. mittig zentrierter Buttons-->
+        <div class = "centered_text" aria-labelledby="angebote-heading">
+            <h1 class="headings" id="angebote-heading">MEINE ANGEBOTE</h1>
+        </div>
+        <div class = "angebote-outer-container">
+            <div class="angebote-inner-container" id="angebot_1">
+                <img src="images/angebote-ernährungsberatung.webp" alt="Angebot Ernährungsberatung">
+                <button class="angebots-button" role="button">ERNÄHRUNGSBERATUNG</button>
+            </div>
+            <div class="angebote-inner-container" id="angebot_2">
+                <img src="images/angebote-körperanalyse.webp" alt="Körperanalyse">
+                <button class="angebots-button" role="button">KÖRPERANALYSE</button>
+            </div>
+            <div class="angebote-inner-container" id="angebot_3">
+                <img src="images/angebote-ernährung-für-kinder.webp" alt="Ernährung für Kinder">
+                <button class="angebots-button" role="button">ERNÄHRUNG FÜR KINDER</button>
+            </div>
+            <div class="angebote-inner-container" id="angebot_4">
+                <img src="images/angebote-coaching-vorträge.webp" alt="Coaching-Vorträge">
+                <button class="angebots-button" role="button">COACHING-VORTRÄGE</button>
+            </div>
+        </div>
+
+        <!--CTA-Containerelement mit Hintergrund/Überschrift und Button-->
+        <div class="CTA-container" arialabelledby="angebotstext">
+            <p class="angebotstext" id="angebotstext">FRÜHJAHRSANGEBOT! Beratungs- und Körperanalysenpackage</p>
+            <a href = "contact.html">
+            <button class="button-cta" role="button">JETZT BUCHEN</button>
+            </a>
+        </div>
+
+        <!-- Additional Slider-Element- Animiert mit CSS-->
+        <div class="fruit-slider" aria-labelledby="fruit-slider-heading">
+            <h2 id="fruit-slider-heading" class="sr-only">Früchte-Slider</h2>
+            <div class="fruit-list" role="listbox" aria-label="Früchteauswahl">
+                <div class="fruit-item"><img src="images/apple.png" alt="fruitslider"></div>
+                <div class="fruit-item"><img src="images/banana.png" alt="fruitslider"></div>
+                <div class="fruit-item"><img src="images/strawberry.png" alt="fruitslider"></div>
+                <div class="fruit-item"><img src="images/pear.png" alt="fruitslider"></div>
+                <div class="fruit-item"><img src="images/grape.png" alt="fruitslider"></div>
+                <div class="fruit-item"><img src="images/apple.png" alt="fruitslider"></div>
+                <div class="fruit-item"><img src="images/banana.png" alt="fruitslider"></div>
+                <div class="fruit-item"><img src="images/strawberry.png" alt="fruitslider"></div>
+                <div class="fruit-item"><img src="images/pear.png" alt="fruitslider"></div>
+                <div class="fruit-item"><img src="images/grape.png" alt="fruitslider"></div>
+            </div>
+        </div>
+
+
+
+        <!--Überschrift-->
+        <div class = "centered_text" aria-labelledby="impressions-heading">
+            <h1 class="headings" id="impressions-heading">IMPRESSIONEN</h1>
+        </div>   
+    
+        <!--Impressions-Bilderslider mit Möglichkeit zum weiterklicken - links/rechts Icons-->
+        <div class="impressionen-wrapper" role="region">
+            <div class="impressionen-container">
+                <div class="slides" role="listbox" aria-label="Bilderslider">
+                    <img class="bild-impressionen" src="images/impression_1.webp" alt="Teller mit Kernen und Trockenfrüchten in Herzform angerichtet">
+                    <img class="bild-impressionen" src="images/impression_2.webp" alt="Ein Mädchenm im Garten mit Gemüsekorb und 2 frisch geernteten Tomatenb, die sie sich vor die Augen hält">
+                    <img class="bild-impressionen" src="images/impression_3.webp" alt="4 Hände die gemeinsam Salate schneiden und Paprika. Am Tisch stehen noch Schüsseln mit Gemüse und bereits geschnittenen Cocktailtomaten">
+                    <img class="bild-impressionen" src="images/impression_4.webp" alt="Verschiedene Spaghetti und Pasta werden gekocht und  auf einem Teller angerichtet">
+                    <img class="bild-impressionen" src="images/impression_5.webp" alt="Mann in blauem Shirt beim Schneiden von Zucchini. Am Tisch liegt noch weiteres vorbereitetes Gemüse wie Avocados">
+                    <img class="bild-impressionen" src="images/impression_6.webp" alt="Einblick in das Praxisbüro in einen Ausschnitt eines Tischs mit Laptop, rosa Blume in einer Vase und Motivationsspruch an der Wand">
+                    <img class="bild-impressionen" src="images/impression_7.webp" alt="Verschiedene Gemüsesmoothies in bunten Farben in hohen Gläsern">
+                </div>
+            </div>
+            <div class="impressionen-nav">
+                <img class="icon-impressionen-links" id= "iconlinks" src="icons/icons-impressionen_left.png" alt="Navigationsicon Links">
+                <img class="icon-impressionen-rechts" id= "iconrechts" src="icons/icons-impressionen_right.png" alt="Navigationsicon Rechts">
+            </div>
+        </div>
+
+        <!--Social-Media Icons-->
+        <!-- noopener und noreffer Integration um Sicherheit zu gewährleisten indem eink neuer Tab geöffnet wird bei Klick des Links und verhindert
+         damit dass die Seite mit window.opener direkt auf der Seite geöffnet wird was ein potentielles Sicherheitsrisiko darstellt - kann zudem Performance verbessern-->
+        <div class="social-media-container" aria-label="Social Media Links">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <img class="social-media" src="icons/facebook_icon.png" alt="Facebook Icon">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <img class="social-media" src="icons/instagram_icon.png" alt="Instagram Icon">
+            </a>
+            <a href="https://at.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <img class="social-media" src="icons/linkedin_icon.png" alt="LinkedIn Icon">
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="Youtube">
+                <img class="social-media" src="icons/youtube_icon.png" alt="Youtube Icon">
+            </a>
+        </div>
+    </main>
+
+<!--Footer 1te Ebene mit Logo/Kontakt/Kontakt-CTA/Newsletteranmeldung-->
+    <footer>
+        <div class="footer-1-container">
+            <div class="inner-footer-1">
+                <img src="icons/n-coach-logo-small.png" alt="N-Coach Logo Kleinformat">
+            </div>
+            <div class="inner-footer-2">
+                <h3 class="headings-3">KONTAKT</h3>
+                <p class="paragraph-text p-contact-footer">Email: samantha@n-coach.at <br> Adresse: Habelberg 1 <br> 0000 Herzösterreich <br>Telefon: 0043/1234567
+                </p>
+            </div>
+            <div class="inner-footer-3">
+                <h3 class="headings-3">JETZT KONTAKT AUFNEHMEN</h3>
+                <p class="paragraph-text">Du hast Fragen oder möchtest einen Termin buchen? Ich bin für Anfragen jederzeit verfügbar.
+                </p>
+                <a href = "contact.html">
+                    <button class="button-cta" role="button">ZUM KONTAKTFORMULAR</button>
+                </a>
+            </div>
+            <div class="inner-footer-4">
+                <h3 class="headings-3">NEWSLETTERANMELDUNG</h3>
+                <p class="paragraph-text">Jetzt für den Newsletter eintragen und keine News mehr verpassen!
+                </p>
+                <form id="news-form-general" action="send.php" method="post" aria-label = "Newsletter-Anmeldung">
+                    <div class = "form-news-general-inside">
+                        <input type="email" name="email" placeholder="Deine Mail..." required aria-label="Email eingeben">
+                        <button id="button-news-general" type="submit" alt="Absenden">ANMELDEN</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!--Footer 2te Ebene-->
+        <div class="footer-2-container">
+            <div class="inner-footer-left">
+                <p class="paragraph-small">Copyright Julian Fritz 2024</p>
+            </div>
+            <div class="inner-footer-right">
+                <a class="paragraph-small" href="#" aria-label="Allgemeine Geschäftsbedingungen">AGB</a>
+                <a class="paragraph-small" href="#" aria-label="Impressum">Impressum</a>
+                <a class="paragraph-small" href="#" aria-label="Datenschutzerklärung">Datenschutz</a>
+            </div>
+        </div>
+        <!--Up-To-Top-Button-->
+        <a id="uptotop" href="#" aria-label="Nach oben scrollen">
+            <img src="icons/up_to_top_icon.png" alt="Up-to-Top-Button">
+        </a>
+
+
+        <section class="cookie-sec" id="cookie-container" aria-labellledby="cookie-heading">
+            <div class="subcontainer">
+              <div id="cookies">
+                <h4>
+                WAS HÄLTST DU VON COOKIES?
+                </h4>
+                <img src="images/cookies.png" alt="Cookie Bild">
+                <p>
+                  Wir setzen Cookies oder ähnliche Technologien für technische Zwecke ein <br> um Ihnen ein bestmögliches Website-Erlebnis zu garantieren! <br>
+                  Verwenden Sie den „Zustimmen“-Button, um dem Einsatz solcher Technologien zuzustimmen. <br>
+                  Verwenden Sie den „Ablehnen“-Button oder schließen Sie diesen Hinweis, um fortzufahren ohne zuzustimmen.</p>
+                  <a href="#" id="cookie-decline-btn" role="button"><button>Alle ablehnen</button></a>
+                  <a href="#" id="cookie-accept-btn" role="button"><button>Akzeptieren</button></a>
+                  <a href="#" id="cookie-accept-all-btn" role="button"><button>Alle akzeptieren</button></a>
+                  <a href="#">Mehr Informationen</a>
+              </div>
+            </div>
+        </section>
+    
+    
+        <div class="preload">
+            <div class="rectangle">
+              <div class="content">
+                <img src="icons/n-coach-logo-small.png" alt="n-coach-logo" class="logo">
+                <div class="quote"><strong>"</strong>Gesundheit ist nicht alles, <br> aber ohne Gesundheit ist alles nichts <strong>"</strong> <br> Arthur  Schopenhauer"</div>
+              </div>
+            </div>
+          </div>
+    </footer>
+
+    <!--Javascript-Einbindung-->
+    <script src="app.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

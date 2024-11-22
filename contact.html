@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!--head -> Metadaten-->
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Titel der Website (Browserleiste)-->
+    <title>Ernährungsberatung N-Coach Kontaktaufnahme</title>
+    <!-- META-Tags und Keywords zur SEO und Suchmaschinenoptimierung-->
+    <meta name="description" content="Professionelle Ernährungsberatung von N-Coach. Entdecken Sie unsere Angebote, Preise und nützliche Online-Tools für Ihre Gesundheit.">
+    <meta name="keywords" content="Ernährungsberatung, N-Coach, Gesundheit, BMI-Rechner, Kalorienumsatz">
+    <!--Integration Stylesheet für Style-Reset // Menü und Footer == allgemeine universelle Teile der Website die auf jeder Unterseite uniform sind-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--Integration Stylesheet für Haupt-Content-->
+    <link rel="stylesheet" type="text/css" href="style_content.css">
+    <!--Integration Stylesheet für Animationen-->
+    <link rel="stylesheet" type="text/css" href="style_animation.css">
+    <!--Integration Custom Font Urbanist von Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Urbanist:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+</head>
+
+<!--Referenzprototypen: https://www.figma.com/design/EpNcYbKYQRF6bK2N2UK2Wr/Konzept_WebProgrammierung?node-id=0%3A1&t=qgl6HhmTJ96EKTPb-1"-->
+
+<body>
+
+    <header role="banner">
+        <!--Nav-Bar inklusive Logo-->  
+            <nav class="nav-container" aria-label = "Hauptnavigation">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img src="icons/n-coach-logo.png" alt="n-coach-logo">
+                    </a>
+                </div>
+    
+                <a href="#" class="hamburger" aria-label = "Menü öffnen">
+                    <img src="icons/hamburger.png" alt="hamburger-menue-icon">
+                </a>
+    
+                <div class="nav-elements">
+                    <ul>
+                        <li><a href="index.html" >HOME</a></li>
+                        <li><a href="about.html">ÜBER MICH</a></li>
+                        <li><a href="offers.html">ANGEBOTE</a></li>
+                        <li><a href="pricelist.html">PREISE</a></li>
+                        <li><a href="blog_apfelmueller.html">BLOG</a></li>
+                        <li><a href="online-tools.html">ONLINE-TOOLS</a></li>
+                        <li><a href="contact.html"aria-current="page">KONTAKT</a></li>
+                    </ul>
+                </div>
+            </nav>
+    </header>
+    
+
+    <main role="main">
+        <!--Hero-Section Bild/Illustration-->  
+        <div class="hero-image">
+            <img src="images/header_contact.webp" alt="Titelbild von frischen Früchten: Brombeeren, Himbeeren und Wassermelone in Herzform angeordnetheader">
+        </div>
+    
+    
+        <!--Überschrift Top-->
+        <div class ="centered_text" aria-labelledby="kontakthead">
+            <h1 class="headings" id="kontakthead">MEINE KONTAKTMÖGLICHKEITEN</h1>
+        </div>
+    
+        <!--Einleitungstext--> 
+        <div class="einleitung">
+            <p class="paragraph-text">Ich freue mich über deine Kontaktaufnahme! Du kannst dich gern per mit einem Anruf an mich wenden oder mir direkt eine Nachricht per Kontaktformular zukommen lassen. Ich melde mich so schnell ich kann! Da  ich aber selbst viele Klienten den ganzen Tag über betreue, rechne bitte mit 1-2 Werktagen bis zu einer Antwort. Vielen Dank!
+            <br> Du kannst mir auch jederzeit auf einer meiner Social Media Pages eine Nachricht hinterlassen.
+            </p>
+        </div>
+    
+        <!--Überschrift-->
+        <div class ="centered_text" aria-labelledby="anfahrthead">
+            <h1 class="headings" id="anfahrthead">ANFAHRT</h1>
+        </div>
+        <!--Inhaltsteil: Anfahrt: Text mit Überschrift und Google Maps Integration-->
+        <div class="anfahrt_container" aria-labelledby="contact-p-head">
+            <div class="anfahrt_innercontent1">
+                <h2 class="headings-2 contact_heading2" id="contact-p-head">HIER FINDEST DU MICH!</h2>
+                <p class="paragraph-text" id="contact-p-data"> Samantha Apfelmüller <br>
+                Praxis N-Coach <br>
+                Adresse: Habelberg 1 <br>
+                0000 Herzösterreich
+                <br> <br>
+                Email: samantha@n-coach.at
+                <br> <br>
+                Telefon: 0043/1234567
+                </p>
+            </div>
+            <div class="anfahrt_innercontent2" aria-label="Google Maps Ortsnavigation">
+        <!--IFRAME Google Maps Einbindung-->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84941.24946898667!2d14.245068199196606!3d48.294887719697755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47739595fa99854d%3A0x7c53292c577975c4!2sLinz!5e0!3m2!1sde!2sat!4v1715850787037!5m2!1sde!2sat" 
+                width="600" height="450" style="border: 6px solid #385475;" allowfullscreen="no" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    
+        <!--Überschrift-->
+        <div class ="centered_text" aria-labelledby="socialhead">
+            <h1 class="headings" id="socialhead">SOCIAL MEDIA</h1>
+        </div>
+        <!--Inhaltsteil: SocialMediaIcons in 2 Column-Layout für alle responsiven Größen inkl. Beschriftung!-->
+        <div class="social-media-container-contact" aria-label="Social Media Links">
+            <div class="socials-innercontent1">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <img class="social-media" src="icons/facebook_icon.png" alt="facebook-icon">
+                    <h2 class="headings-2">FACEBOOK</h2>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <img class="social-media" src="icons/instagram_icon.png" alt="instagram-icon">
+                    <h2 class="headings-2">INSTAGRAM</h2>
+                </a>
+            </div>
+            <div class="socials-innercontent2">
+                <a href="https://at.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <img class="social-media" src="icons/linkedin_icon.png" alt="linkedin-icon">
+                    <h2 class="headings-2">LINKEDIN</h2>
+                </a>
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="Youtube">
+                    <img class="social-media" src="icons/youtube_icon.png" alt="youtube-icon">
+                    <h2 class="headings-2">YOUTUBE</h2>
+                </a>
+            </div>
+        </div>
+    
+        <!--Überschrift-->
+        <div class ="centered_text" aria-labelledby="kontakthead">
+            <h1 class="headings" id="kontakthead">KONTAKTFORMULAR</h1>
+        </div>
+        <div class="contact_heading">
+            <h2 class="headings-2">ICH FREUE MICH AUF DEINE NACHRICHT!</h2>
+        </div>
+    
+        <!--Kontaktformular!-->
+            <div class="form_container">
+                <form action="send-contact.php" method="post">
+    
+                    <div class="inside_form" id="name_fields">
+                        <div>
+                            <label for="vorname">Vorname</label>
+                            <input type="text" id="vorname" name="vorname" placeholder="Max...." required>
+                        </div>
+                        <div>
+                            <label for="name">Name</label>      
+                            <input type="text" id="name" name="name" placeholder="Mustermann...." required>
+                        </div>
+                    </div>
+    
+                    <div class="inside_form">
+                        <label for="email">E-Mail</label>
+                        <input type="email" id="email" name="email" placeholder="maxmustermann@email.com" required>
+                    </div>
+    
+                    <div class="inside_form">
+                        <label for="message">Meine Nachricht</label>
+                        <textarea id="message" name="message"
+                        placeholder="Ich hätte gerne Auskunft/benötige/möchte einen Termin vereinbaren/hätte gerne mehr Informationen zu.........">        
+                        </textarea>
+                    </div>
+                    <!--Checkbox für Datenspeicherung akzeptieren-->
+                    <div class="inside_form" id="check_form">
+                        <input type="checkbox" id = "agb" name="agb" required>
+                        <label for="agb" id="label_agb">Hiermit erkläre ich mich einverstanden, dass meine in das  Kontaktformular 
+                        eingegebenen Daten elektronisch gespeichert und zum  
+                        Zweck der Kontaktaufnahme verarbeitet und genutzt werden. 
+                        Mir ist  bekannt, dass ich meine Einwilligung jederzeit widerrufen kann.</label>
+                    </div>
+                    <!--Button zum Absenden des Formulares-->
+                    <div class="inside_form">
+                        <button class="button-cta" input type="submit" role="button">KONTAKT AUFNEHMEN</button>
+                    </div>
+                </form>
+            </div>
+
+        <!--Social-Media Icons-->
+        <!-- noopener und noreffer Integration um Sicherheit zu gewährleisten indem eink neuer Tab geöffnet wird bei Klick des Links und verhindert
+         damit dass die Seite mit window.opener direkt auf der Seite geöffnet wird was ein potentielles Sicherheitsrisiko darstellt - kann zudem Performance verbessern-->
+         <div class="social-media-container" aria-label="Social Media Links">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <img class="social-media" src="icons/facebook_icon.png" alt="Facebook Icon">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <img class="social-media" src="icons/instagram_icon.png" alt="Instagram Icon">
+            </a>
+            <a href="https://at.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <img class="social-media" src="icons/linkedin_icon.png" alt="LinkedIn Icon">
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="Youtube">
+                <img class="social-media" src="icons/youtube_icon.png" alt="Youtube Icon">
+            </a>
+        </div>
+    </main>
+
+<!--Footer 1te Ebene mit Logo/Kontakt/Kontakt-CTA/Newsletteranmeldung-->
+    <footer>
+        <div class="footer-1-container">
+            <div class="inner-footer-1">
+                <img src="icons/n-coach-logo-small.png" alt="N-Coach Logo Kleinformat">
+            </div>
+            <div class="inner-footer-2">
+                <h3 class="headings-3">KONTAKT</h3>
+                <p class="paragraph-text p-contact-footer">Email: samantha@n-coach.at <br> Adresse: Habelberg 1 <br> 0000 Herzösterreich <br>Telefon: 0043/1234567
+                </p>
+            </div>
+            <div class="inner-footer-3">
+                <h3 class="headings-3">JETZT KONTAKT AUFNEHMEN</h3>
+                <p class="paragraph-text">Du hast Fragen oder möchtest einen Termin buchen? Ich bin für Anfragen jederzeit verfügbar.
+                </p>
+                <a href = "contact.html">
+                    <button class="button-cta" role="button">ZUM KONTAKTFORMULAR</button>
+                </a>
+            </div>
+            <div class="inner-footer-4">
+                <h3 class="headings-3">NEWSLETTERANMELDUNG</h3>
+                <p class="paragraph-text">Jetzt für den Newsletter eintragen und keine News mehr verpassen!
+                </p>
+                <form id="news-form-general" action="send.php" method="post" aria-label = "Newsletter-Anmeldung">
+                    <div class = "form-news-general-inside">
+                        <input type="email" name="email" placeholder="Deine Mail..." required aria-label="Email eingeben">
+                        <button id="button-news-general" type="submit" alt="Absenden">ANMELDEN</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!--Footer 2te Ebene-->
+        <div class="footer-2-container">
+            <div class="inner-footer-left">
+                <p class="paragraph-small">Copyright Julian Fritz 2024</p>
+            </div>
+            <div class="inner-footer-right">
+                <a class="paragraph-small" href="#" aria-label="Allgemeine Geschäftsbedingungen">AGB</a>
+                <a class="paragraph-small" href="#" aria-label="Impressum">Impressum</a>
+                <a class="paragraph-small" href="#" aria-label="Datenschutzerklärung">Datenschutz</a>
+            </div>
+        </div>
+        <!--Up-To-Top-Button-->
+        <a id="uptotop" href="#" aria-label="Nach oben scrollen">
+            <img src="icons/up_to_top_icon.png" alt="Up-to-Top-Button">
+        </a>
+    </footer>
+
+    <!--Javascript-Einbindung-->
+    <script src="app.js"></script>
+</body>
+</html>

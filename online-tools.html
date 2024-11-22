@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!--head -> Metadaten-->
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Titel der Website (Browserleiste)-->
+    <title>Ernährungsberatung N-Coach Online-Tools</title>
+    <!-- META-Tags und Keywords zur SEO und Suchmaschinenoptimierung-->
+    <meta name="description" content="Professionelle Ernährungsberatung von N-Coach. Entdecken Sie unsere Angebote, Preise und nützliche Online-Tools für Ihre Gesundheit.">
+    <meta name="keywords" content="Ernährungsberatung, N-Coach, Gesundheit, BMI-Rechner, Kalorienumsatz">
+    <!--Integration Stylesheet für Style-Reset // Menü und Footer == allgemeine universelle Teile der Website die auf jeder Unterseite uniform sind-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--Integration Stylesheet für Haupt-Content-->
+    <link rel="stylesheet" type="text/css" href="style_content.css">
+    <!--Integration Stylesheet für Animationen-->
+    <link rel="stylesheet" type="text/css" href="style_animation.css">
+    <!--Integration Custom Font Urbanist von Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Urbanist:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+</head>
+
+<!--Referenzprototypen: https://www.figma.com/design/EpNcYbKYQRF6bK2N2UK2Wr/Konzept_WebProgrammierung?node-id=0%3A1&t=qgl6HhmTJ96EKTPb-1"-->
+
+<body>
+
+    <header role="banner">
+        <!--Nav-Bar inklusive Logo-->  
+            <nav class="nav-container" aria-label = "Hauptnavigation">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img src="icons/n-coach-logo.png" alt="n-coach-logo">
+                    </a>
+                </div>
+    
+                <a href="#" class="hamburger" aria-label = "Menü öffnen">
+                    <img src="icons/hamburger.png" alt="hamburger-menue-icon">
+                </a>
+    
+                <div class="nav-elements">
+                    <ul>
+                        <li><a href="index.html" aria-current="page">HOME</a></li>
+                        <li><a href="about.html">ÜBER MICH</a></li>
+                        <li><a href="offers.html">ANGEBOTE</a></li>
+                        <li><a href="pricelist.html">PREISE</a></li>
+                        <li><a href="blog_apfelmueller.html">BLOG</a></li>
+                        <li><a href="online-tools.html" aria-current="page">ONLINE-TOOLS</a></li>
+                        <li><a href="contact.html">KONTAKT</a></li>
+                    </ul>
+                </div>
+            </nav>
+    </header>
+    
+    <main role="main">
+        <!--Hero-Section Bild/Illustration-->  
+        <div class="hero-image">
+            <img src="images/header_online_tools.webp" alt="Titelbild eines Apfels in einer Zoom-Nahaufnahme mit Wasserperlen auf der Oberfläche">
+        </div>
+    
+        <!--Überschrift-->
+        <div class = "centered_text" aria-labelledby="bmihead">
+            <h1 class="headings" id="bmihead">BMI-RECHNER</h1>
+        </div>
+        <!--Zusatzerklärung-->
+        <h2 class="bold-headings-2">Dieser BMI-Rechner ist für Erwachsene ab 18 Jahre geeignet</h2>
+    
+        <!--Eingabeformular für den BMI-Rechner-->
+        <section class= "outer_section_tools" aria-label="BMI Berechnungsformular">
+            <form id="bmiformular" onsubmit="return berechneBMI(event)">
+                <label for="geschlecht">Geschlecht</label>
+                <select id="geschlecht" placeholder="m/w" required>
+                    <option value="männlich">männlich</option>
+                    <option value="weiblich">weiblich</option>
+                </select>
+                <label for="groesse">Größe</label>
+                <input type="text" id="groesse" placeholder="Bitte in CM angeben...." required>
+                <label for="gewicht">Gewicht</label>
+                <input type="text" id="gewicht" placeholder="Bitte in KG angeben...." required>
+                <button class="button-cta-berechnung1"  type="submit" role="button" >BMI BERECHNEN</button>
+            </form>  
+            <h3 id = "bmi-achtung">ACHTUNG Die Darstellung des BMI`s ist auf Grenzwerte eines Gewichts von 30kg bis 150kg und eine Größe von 140cm bis 200cm beschränkt.
+            Sie können außerhalb dieser Werte eine Berechnung trotzdem durchführen aber die Darstellung kann nicht angezeigt werden.</h3>
+            <div id="ergebniswrapper">
+                 <p id="bmiErgebnisContainer" class="headings-3 umsatzberechnung hidden">Dein BMI: <span id="bmiErgebnis"></span></p>
+            </div>
+        </section>
+        
+    
+        <section class="outer_section_tools2" aria-label="BMI Darstellungsgrafik">
+            <canvas id="bmiChart" class="hidden"></canvas>
+            <ul id = "bmi-ergebnisliste">
+                <li><strong>Untergewicht:</strong> BMI kleiner 18.5</li>
+                <li><strong>Normalgewicht:</strong> BMI zwischen 18.5 und 25</li>
+                <li><strong>Präadipositas:</strong> BMI zwischen 25 und 30</li>
+                <li><strong>Adipositas Grad I:</strong> BMI zwischen 30 und 35</li>
+                <li><strong>Adipositas Grad II:</strong> BMI zwischen 35 und 40</li>
+                <li><strong>Adipositas Grad III:</strong> BMI größer als 40</li>
+            </ul>
+        </section>
+    
+        <!--Überschrift-->
+        <div class= "centered_text" aria-labelledby="kalorienhead">
+            <h1 class="headings" id="kalorienhead">KALORIENUMSATZ-RECHNER</h1>
+        </div>
+        <!--Zusatzerklärung-->
+        <h2 class="bold-headings-2 ">Berechne deinen täglichen Energiebedarf</h2>
+      
+        <!--Eingabeformular für den Kalorienumsatz-Rechner-->
+        <section class = "outer_section_tools" aria-label="Kalorienumsatz Berechnung">
+            <form id="umsatzformular" onsubmit="return berechneKalorienUmsatz(event)">
+                <label for="geschlecht2">Geschlecht</label>
+                <select id="geschlecht2" placeholder="m/w" required>
+                    <option value="männlich">männlich</option>
+                    <option value="weiblich">weiblich</option>
+                </select>
+                <label for="groesse2">Größe</label>
+                <input type="text" id="groesse2" placeholder="Bitte in CM angeben...." required>
+                <label for="gewicht2">Gewicht</label>
+                <input type="text" id="gewicht2" placeholder="Bitte in KG angeben...." required>
+                <label for="alter2">Alter</label>
+                <input type="text" id="alter2" placeholder="18+...." required>
+                <label for="activity2">Tägliches Aktivitätslevel</label>
+                <select id="activity2" placeholder="überwiegend stehend und gehend..." required>
+                    <option value="uesitzend">überwiegend sitzend, kaum körperlich aktiv (MET:1,5)</option>
+                    <option value="gtsitzend">größtenteils sitzend, teils gehend und stehend(MET:2)</option>
+                    <option value="uestehend">überwiegend stehend und gehend (MET:3)</option>
+                    <option value="anstrengend">anstrengende Tätigkeit, leichter Sport (MET:4,5)</option>
+                    <option value="sehranstrengend">sehr anstrengende Tätigkeit, sehr intensiver Sport (MET:8)</option>
+                </select>
+                <button class="button-cta-berechnung2" type="submit" role="button">UMSATZ BERECHNEN</button>
+                <div id = "ergebniswrapper">
+                    <h3 class="headings-3 umsatzberechnung">Dein Kalorienumsatz pro Tag entspricht: <span id="kalorienUmsatzErgebnis"></span></h3>
+                </div>
+            </form>
+        </section>
+    
+        <!---- Ernährungsquiz -->
+        <!--Überschrift-->
+        <section class = "quiz_sec">
+            <div class = "quiz_inner">
+                <div class = "centered_text" aria-labelledby = "quizhead">
+                    <h1 class="headings" id="quizhead">ERNÄHRUNGS- UND GESUNDHEITSQUIZ</h1>
+                </div>
+                <!--Zusatzerklärung-->
+                <h2 class="bold-headings-2">Teste dein Wissen zu Ernährung und Gesundheit!</h2>
+                <a href = "quiz.html">
+                    <button class ="button-quiz-tool" role="button">Teste JETZT dein Wissen!</button>
+                </a>
+            </div>
+        </section>
+
+
+        <!----Minigame-Section -->
+        <section class = "minigame-sec">
+            <div class = "minigame-innerdiv">
+                <div class ="centered_text">
+                    <h1 class = "headings"> SPASS MIT OBST UND GEMÜSE! TESTE MEINE MINIGAMES!</h1>
+                </div>
+                <p class = "paragraph-text">Ernährung muss nicht immer nur Ernst sein! Viel Spaß bei den Minigames!</p>
+                <div class = "titelbild-erklärung">
+                    <h3 class = "spielerklärung">Beim Obst-Gemüse Plattformer ist es deine Aufgabe - so viele Münzen wie möglich zu sammeln während du einer Menge an Lebensmittel-Gegnern ausweichst <br> VIEL SPASS</h3>
+                    <img id="minigames-titelbild" src="games/Titelbild_Minigames.webp">
+                    <h3 class = "spielerklärung">Beim Ernährungs-Fischen musst du so viele gesunde Lebensmittel wie möglich einsammeln - aber Vorsicht! Lass dich nicht von den verschiedenen Donuts erwischen und verführen. <br> VIEL SPASS</h3>
+                </div>
+                <p class="minigame-explainer">Die Minigames funktionieren sowohl auf Desktop- als auch auf Touchscreen auf dem Tablet <br> Bitte beachte - sie sind leider nicht für Smartphone Nutzung gedacht</p>
+                <a href = "minigame1.html"><button class ="button-quiz-tool" role="button">Zum Obst-Gemüse Plattformer</button>
+                <a href = "minigame2.html"><button class ="button-quiz-tool" role="button">Zum Ernährungs-Fischen</button>
+            </div>
+        </section>
+
+        <!--Social-Media Icons-->
+        <!-- noopener und noreffer Integration um Sicherheit zu gewährleisten indem eink neuer Tab geöffnet wird bei Klick des Links und verhindert
+         damit dass die Seite mit window.opener direkt auf der Seite geöffnet wird was ein potentielles Sicherheitsrisiko darstellt - kann zudem Performance verbessern-->
+         <div class="social-media-container" aria-label="Social Media Links">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <img class="social-media" src="icons/facebook_icon.png" alt="Facebook Icon">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <img class="social-media" src="icons/instagram_icon.png" alt="Instagram Icon">
+            </a>
+            <a href="https://at.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <img class="social-media" src="icons/linkedin_icon.png" alt="LinkedIn Icon">
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="Youtube">
+                <img class="social-media" src="icons/youtube_icon.png" alt="Youtube Icon">
+            </a>
+        </div>
+    </main>
+
+<!--Footer 1te Ebene mit Logo/Kontakt/Kontakt-CTA/Newsletteranmeldung-->
+    <footer>
+        <div class="footer-1-container">
+            <div class="inner-footer-1">
+                <img src="icons/n-coach-logo-small.png" alt="N-Coach Logo Kleinformat">
+            </div>
+            <div class="inner-footer-2">
+                <h3 class="headings-3">KONTAKT</h3>
+                <p class="paragraph-text p-contact-footer">Email: samantha@n-coach.at <br> Adresse: Habelberg 1 <br> 0000 Herzösterreich <br>Telefon: 0043/1234567
+                </p>
+            </div>
+            <div class="inner-footer-3">
+                <h3 class="headings-3">JETZT KONTAKT AUFNEHMEN</h3>
+                <p class="paragraph-text">Du hast Fragen oder möchtest einen Termin buchen? Ich bin für Anfragen jederzeit verfügbar.
+                </p>
+                <a href = "contact.html">
+                    <button class="button-cta" role="button">ZUM KONTAKTFORMULAR</button>
+                </a>
+            </div>
+            <div class="inner-footer-4">
+                <h3 class="headings-3">NEWSLETTERANMELDUNG</h3>
+                <p class="paragraph-text">Jetzt für den Newsletter eintragen und keine News mehr verpassen!
+                </p>
+                <form id="news-form-general" action="send.php" method="post" aria-label = "Newsletter-Anmeldung">
+                    <div class = "form-news-general-inside">
+                        <input type="email" name="email" placeholder="Deine Mail..." required aria-label="Email eingeben">
+                        <button id="button-news-general" type="submit" alt="Absenden">ANMELDEN</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!--Footer 2te Ebene-->
+        <div class="footer-2-container">
+            <div class="inner-footer-left">
+                <p class="paragraph-small">Copyright Julian Fritz 2024</p>
+            </div>
+            <div class="inner-footer-right">
+                <a class="paragraph-small" href="#" aria-label="Allgemeine Geschäftsbedingungen">AGB</a>
+                <a class="paragraph-small" href="#" aria-label="Impressum">Impressum</a>
+                <a class="paragraph-small" href="#" aria-label="Datenschutzerklärung">Datenschutz</a>
+            </div>
+        </div>
+        <!--Up-To-Top-Button-->
+        <a id="uptotop" href="#" aria-label="Nach oben scrollen">
+            <img src="icons/up_to_top_icon.png" alt="Up-to-Top-Button">
+        </a>
+    </footer>
+
+    <!--Javascript-Einbindung-->
+    <script src="app.js"></script>
+    <!--Script Framework chart.js-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="chart.js"></script>
+    <script src="online-tools.js"></script>
+</body>
+</html>

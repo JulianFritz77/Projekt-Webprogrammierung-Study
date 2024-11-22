@@ -1,0 +1,5 @@
+<!--Liste der E-Mail-Adressen die sich zum Newsletter angemeldet haben
+    Alternativmethode zur Speicherung in einer Datenbank
+    Das send.php Script, welches die Daten der Anmeldungen verarbeitet speichert die
+    validierten und korrekt eingegeben Adressen in dieser Datei ab.-->
+

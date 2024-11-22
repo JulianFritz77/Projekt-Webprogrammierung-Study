@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--head -> Metadaten-->
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Titel der Website (Browserleiste)-->
+    <title>Ernährungsberatung N-Coach Obst/Gemüse-Plattformer-MInigame</title>
+    <!-- META-Tags und Keywords zur SEO und Suchmaschinenoptimierung-->
+    <meta name="description" content="Professionelle Ernährungsberatung von N-Coach. Entdecken Sie unsere Angebote, Preise und nützliche Online-Tools für Ihre Gesundheit.">
+    <meta name="keywords" content="Ernährungsberatung, N-Coach, Gesundheit, BMI-Rechner, Kalorienumsatz">
+    <!--Integration Stylesheet für Style-Reset // Menü und Footer == allgemeine universelle Teile der Website die auf jeder Unterseite uniform sind-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--Integration Stylesheet für Minigames-->
+    <link rel="stylesheet" type="text/css" href="style_minigames.css">
+    <!--Integration Stylesheet für Animationen-->
+    <link rel="stylesheet" type="text/css" href="style_animation.css">
+    <!--Integration Custom Font Urbanist von Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Urbanist:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <!--Script für Minigame1-->
+    <script src="minigame1.js" defer></script>
+
+</head>
+
+<body>
+
+    <!--Zurück zu den Online-Tools-->  
+    <div class="backtotools">
+        <a href="online-tools.html"><button class = "backtotools-button">Zurück zu den Online-Tools</button></a>
+    </div>
+
+    <div id="touch-controls2">
+        <button id="leftBtn">LINKS</button>
+        <button id="rightBtn">RECHTS</button>
+        <button id="jumpBtn">SPRINGEN</button>
+        <button id="startBtn">START</button>
+        <button id="restartBtn">NEUSTART</button>
+    </div>
+    
+    <canvas id="canvas2"></canvas>
+
+    <audio id="backgroundMusic" src="games/backgroundMusic.mp3" loop></audio>
+    <audio id="jumpSound" src="games/jumpSound.mp3"></audio>
+    <audio id="enemyCollisionSound" src="games/enemyCollision.mp3"></audio>
+    <audio id="coinSound" src="games/coinSound.mp3"></audio>
+    <audio id="gameOverSound" src = "games/gameOver.mp3"></audio>
+    <audio id="startGameSound" src = "games/gameStart.mp3"></audio>
+
+    <img id="player" src="games/player.png">
+    <img id="coinImage" src="games/coinImage.png">
+    <img id="enemyImage" src="games/enemy1.png">
+    <img id="layer-1" src="games/layer-1.png">
+    <img id="layer-2" src="games/layer-2.png">
+    <img id="layer-3" src="games/layer-3.png">
+    <img id="layer-4" src="games/layer-4.png" >
+    <img id="layer-5" src="games/layer-5.png">
+    <img id="layer-6" src="games/layer-6.png">
+    <img id="enemy-karrot" src = "games/enemy1.png">
+    <img id="enemy-brokkoli" src = "games/enemy2.png">
+    <img id="enemy-sandwich" src = "games/enemy3.png">
+    <img id="plattform-1" src="games/plattform-1.png">
+    <img id="plattform-2" src="games/plattform-2.png">
+    <img id="heartImage" src="games/heart.png">
+
+
+</body>
+</html>

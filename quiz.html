@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!--head -> Metadaten-->
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Titel der Website (Browserleiste)-->
+    <title>Ernährungsberatung N-Coach Ernährungsquiz</title>
+    <!-- META-Tags und Keywords zur SEO und Suchmaschinenoptimierung-->
+    <meta name="description" content="Professionelle Ernährungsberatung von N-Coach. Entdecken Sie unsere Angebote, Preise und nützliche Online-Tools für Ihre Gesundheit.">
+    <meta name="keywords" content="Ernährungsberatung, N-Coach, Gesundheit, BMI-Rechner, Kalorienumsatz">
+    <!--Integration Stylesheet für Style-Reset // Menü und Footer == allgemeine universelle Teile der Website die auf jeder Unterseite uniform sind-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--Integration Stylesheet für das Quiz-->
+    <link rel="stylesheet" type="text/css" href="quiz_style.css">
+    <!--Integration Stylesheet für Animationen-->
+    <link rel="stylesheet" type="text/css" href="style_animation.css">
+    <!--Integration Custom Font Urbanist von Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Urbanist:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+</head>
+
+<!--Referenzprototypen: https://www.figma.com/design/EpNcYbKYQRF6bK2N2UK2Wr/Konzept_WebProgrammierung?node-id=0%3A1&t=qgl6HhmTJ96EKTPb-1"-->
+
+<body>
+
+    <header role="banner">
+        <!--Nav-Bar inklusive Logo-->  
+            <nav class="nav-container" aria-label = "Hauptnavigation">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img src="icons/n-coach-logo.png" alt="n-coach-logo">
+                    </a>
+                </div>
+    
+                <a href="#" class="hamburger" aria-label = "Menü öffnen">
+                    <img src="icons/hamburger.png" alt="hamburger-menue-icon">
+                </a>
+    
+                <div class="nav-elements">
+                    <ul>
+                        <li><a href="index.html" aria-current="page">HOME</a></li>
+                        <li><a href="about.html">ÜBER MICH</a></li>
+                        <li><a href="offers.html">ANGEBOTE</a></li>
+                        <li><a href="pricelist.html">PREISE</a></li>
+                        <li><a href="blog_apfelmueller.html">BLOG</a></li>
+                        <li><a href="online-tools.html">ONLINE-TOOLS</a></li>
+                        <li><a href="contact.html">KONTAKT</a></li>
+                    </ul>
+                </div>
+            </nav>
+    </header>
+    
+    <main role="main">
+        <section class = "hero-sec">
+        <!--Hero-Section Bild-->  
+            <div class="hero-image">
+                <img src="images/header_quiz.webp" alt="hero image">
+            </div>
+        </section>
+        
+        <!--Zurück - Button -->  
+        <div class="backtotools" aria-labelledby="backtotools">
+            <a href="online-tools.html"><button class = "angebots-button" id = "backtotools" role="button">Zurück zu den Online-Tools</button></a>
+        </div>
+             
+        
+        <!--Überschrift-->
+        <div class="centered_text" aria-labelledby="ernährungshead">
+            <h1 class="headings" id="ernährungshead">ERNÄHRUNGSQUIZ</h1>
+        </div>
+        
+                <!--HTML für Quiz-App--> 
+                <section class="quizbox" aria-label="Ernährungs- und Gesundheitsquiz">
+                    <div class="container">
+                        <div id="start-screen" aria-label="Startscreen">
+                            <h2>Willkommen beim Ernährungsquiz!</h2>
+                            <p>Teste dein Wissen über Ernährung und Gesundheit.</p>
+                            <button id="start-btn" role="button" class="start-btn btn">Quiz Starten</button>
+                            
+                        </div>
+                        <div id="question-container" class="hide">
+                            <div id="question">Frage</div>
+                            <div id="answer-buttons" class="btn-grid">
+                                <button class="btn">Antwort 1</button>
+                                <button class="btn">Antwort 2</button>
+                                <button class="btn">Antwort 3</button>
+                                <button class="btn">Antwort 4</button>
+                            </div>
+                        </div>
+                        <div class="controls">
+                            <button id="next-btn" role="button" class="next-btn btn hide">Weiter</button>
+                        </div>
+                        <div id="end-screen" class="hide" aria-label="Endscreen">
+                            <h2>QUIZ BEENDET!</h2>
+                            <p id="score"></p>
+                            <button id="restart-btn" role="button" class="btn">Noch ein Versuch? - NEUSTART!</button>
+                        </div>
+                    </div>
+                </section>
+                           
+        <!--Social-Media Icons-->
+        <!-- noopener und noreffer Integration um Sicherheit zu gewährleisten indem eink neuer Tab geöffnet wird bei Klick des Links und verhindert
+         damit dass die Seite mit window.opener direkt auf der Seite geöffnet wird was ein potentielles Sicherheitsrisiko darstellt - kann zudem Performance verbessern-->
+        <div class="social-media-container" aria-label="Social Media Links">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <img class="social-media" src="icons/facebook_icon.png" alt="Facebook Icon">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <img class="social-media" src="icons/instagram_icon.png" alt="Instagram Icon">
+            </a>
+            <a href="https://at.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <img class="social-media" src="icons/linkedin_icon.png" alt="LinkedIn Icon">
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="Youtube">
+                <img class="social-media" src="icons/youtube_icon.png" alt="Youtube Icon">
+            </a>
+        </div>
+    </main>
+
+<!--Footer 1te Ebene mit Logo/Kontakt/Kontakt-CTA/Newsletteranmeldung-->
+    <footer>
+        <div class="footer-1-container">
+            <div class="inner-footer-1">
+                <img src="icons/n-coach-logo-small.png" alt="N-Coach Logo Kleinformat">
+            </div>
+            <div class="inner-footer-2">
+                <h3 class="headings-3">KONTAKT</h3>
+                <p class="paragraph-text p-contact-footer">Email: samantha@n-coach.at <br> Adresse: Habelberg 1 <br> 0000 Herzösterreich <br>Telefon: 0043/1234567
+                </p>
+            </div>
+            <div class="inner-footer-3">
+                <h3 class="headings-3">JETZT KONTAKT AUFNEHMEN</h3>
+                <p class="paragraph-text">Du hast Fragen oder möchtest einen Termin buchen? Ich bin für Anfragen jederzeit verfügbar.
+                </p>
+                <a href = "contact.html">
+                    <button class="button-cta" role="button">ZUM KONTAKTFORMULAR</button>
+                </a>
+            </div>
+            <div class="inner-footer-4">
+                <h3 class="headings-3">NEWSLETTERANMELDUNG</h3>
+                <p class="paragraph-text">Jetzt für den Newsletter eintragen und keine News mehr verpassen!
+                </p>
+                <form id="news-form-general" action="send.php" method="post" aria-label = "Newsletter-Anmeldung">
+                    <div class = "form-news-general-inside">
+                        <input type="email" name="email" placeholder="Deine Mail..." required aria-label="Email eingeben">
+                        <button id="button-news-general" type="submit" alt="Absenden">ANMELDEN</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!--Footer 2te Ebene-->
+        <div class="footer-2-container">
+            <div class="inner-footer-left">
+                <p class="paragraph-small">Copyright Julian Fritz 2024</p>
+            </div>
+            <div class="inner-footer-right">
+                <a class="paragraph-small" href="#" aria-label="Allgemeine Geschäftsbedingungen">AGB</a>
+                <a class="paragraph-small" href="#" aria-label="Impressum">Impressum</a>
+                <a class="paragraph-small" href="#" aria-label="Datenschutzerklärung">Datenschutz</a>
+            </div>
+        </div>
+        <!--Up-To-Top-Button-->
+        <a id="uptotop" href="#" aria-label="Nach oben scrollen">
+            <img src="icons/up_to_top_icon.png" alt="Up-to-Top-Button">
+        </a>
+    </footer>
+
+    <!--Javascript-Einbindung-->
+    <script src="quiz.js"></script>
+</body>
+</html>

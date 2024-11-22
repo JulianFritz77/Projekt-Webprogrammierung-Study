@@ -1,0 +1,658 @@
+/*****************************************************************/
+/* STYLESHEET FÜR UNIVERSELLE WEBSITE TEILE - Menü + Footer + Stylereset --- INKLUSIVE RESPONISIBILITÄT */
+/*****************************************************************/
+
+/* Import Googlefonts */
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* CSS-RESET-RULES */
+/* Box sizing rules */
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Margin und Padding Grundlegend entfernen */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  display: block;
+}
+
+
+
+ /* GOOGLE-FONTS - Wie nutze ich die Custom-Font ! 
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.urbanist-<uniquifier> {
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+
+/* Generelles Styling für alle Seiten der Website */
+* {
+    font-family: "Urbanist";
+    font-optical-sizing: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/*****************************************************************/
+/* UTILITY-CLASSES - INKLUSIVE RESPONSIVITÄT*/
+/*****************************************************************/
+
+
+.headings {
+    font-size: 34px;
+    font-weight: bold;
+    color: #83eb71;
+}
+.headings-2 {
+    font-size: 26px;
+    font-weight: bold;
+    color:black;
+}
+.paragraph-text {
+    font-size: 20px;
+    color: black;
+}
+.paragraph-small {
+    font-size: 16px;
+    color:black;
+}
+.button-cta {
+    color: black;
+    background-color:#83eb71;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.5);
+    padding: 10px 25px;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+}
+
+.button-cta:hover {
+    transform: translateY(-5px);
+    transition: 1s ease-in-out;
+}
+
+
+.angebots-button {
+    color: black;
+    background-color:#83eb71;
+    font-size: 20px;
+    text-transform:uppercase;
+    font-weight: bold;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.5);
+    padding: 14px 40px;
+    cursor: pointer;
+}
+
+
+.centered_text { /* Änderung Abstand - Top - von den Zentrierten Überschriften! - Kollektiv hier zu finden!! */
+    display: flex;
+    justify-content: center;
+    padding: 60px 0 0 0;
+}
+
+ .bold-headings-2 {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+
+/* TABLET */
+@media only screen and (min-width: 834px) and (max-width: 1440px) {
+    .headings {
+        font-size: 26px;
+    }
+    .headings-2 {
+        font-size: 18px;
+    }
+    .paragraph-text {
+        font-size: 18px;
+    }
+    .paragraph-small {
+        font-size: 14px;
+    }
+    .button-cta {
+        font-size: 16px;
+        padding: 8px 20px;
+    }
+    .angebots-button {
+        font-size: 14px;
+        padding: 10px 24px;
+    }
+    .centered_text {
+        padding: 40px 0 0 0; /* Änderung Abstand - Top - von den Zentrierten Überschriften! - Kollektiv hier zu finden!! */
+     }
+     .bold-headings-2 {
+        font-weight: bold;
+        font-size: 16px;
+        text-align: center;
+     }
+}
+
+
+/* SMARTPHONE */
+@media only screen and (max-width: 834px) {
+    .headings {
+        font-size:20px;
+    }
+    .headings-2 {
+        font-size: 16px;
+    }
+    .paragraph-text {
+        font-size: 16px;
+    }
+    .paragraph-small {
+        font-size: 12px;
+    }
+    .button-cta {
+        font-size: 14px;
+        padding: 6px 15px;
+    }
+    .angebots-button {
+        font-size: 12px;
+        padding: 7px 20px;
+    }
+    .centered_text {
+        padding: 20px 0 0 0; /* Änderung Abstand - Top - von den Zentrierten Überschriften! - Kollektiv hier zu finden!! */
+     }
+     .bold-headings-2 {
+        font-weight: bold;
+        font-size: 14px;
+        text-align: center;
+     }
+}
+
+
+
+
+
+/*****************************************************************/
+/*NAVIGATION MENÜ*/
+/*****************************************************************/
+
+/* NAVIGATION BAR INKL. LOGO /* 
+/* äußerer Navigation-Container*/
+.nav-container {
+    width: calc(100% - 80px); /* 40px Abstand rundherum um jede Seite */
+    padding: 0 20px;
+    margin: 10px; /* Der Abstand rundherum */
+    height: 160px;
+    display: grid;
+    grid-template-columns: auto 1fr auto; 
+    /* definiert drei Spalten: die erste für das Logo, 
+    die mittlere als flexiblen Zwischenraum, und die 
+    dritte für das Hamburger-Icon und die Navigationselemente. */
+    align-items: center;
+    z-index: 100;
+}
+
+
+/* Logo */
+.nav-logo {
+    grid-column: 1;  /* Logo muss immer in 1er Spalte bleiben */
+    cursor: pointer;
+}
+
+.nav-logo img {
+    height: 100%;
+    max-height: 160px; /* Passe die Größe des Logos an */
+}
+
+
+/* Nav-Container Unordered List */
+.nav-elements ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Nav-Elemente werden nach rechts ausgerichtet */
+}
+
+/* Nav-Container List */
+.nav-elements ul li {
+    list-style: none;
+}
+
+/* Nav-Container Anchor-Tags*/
+.nav-elements ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 0 1rem;
+    display: block;
+    font-weight: bold;
+    font-size: 26px;
+    transition: 0.5s ease-in-out;
+}
+
+/* Small-Animation - Text - on-hover Link-Anchor-Tags Menü*/
+.nav-elements li a:hover {
+    transition: 0.5s ease-in-out;
+    font-size: 28px;
+}
+
+
+
+
+/* Menübutton - Hamburger Menü - Styling // display:none on Desktop und Tablet! wir wollen ihn nur auf Mobile sehen*/
+.hamburger {
+    grid-column: 3; /* Hamburger - Icon muss immer in der 3ten Spalte bleiben - wird hier sichergestellt*/
+    display:none;
+    margin-right: 10px; /* Abstand für den Hamburger Icon - nach rechts - hier anpassen */
+    
+}
+
+
+/* RESPONSIVE LAYOUT MENÜ MOBILE*/
+@media only screen and (max-width: 834px) {
+
+    .nav-container {
+        width: calc(100% - 50px); /* 50px Abstand rundherum um jede Seite */
+        padding: 0 10px;
+        height: 160px;
+
+    }
+    
+/* Hamburger - wird in Flex angezeigt*/
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 60px;
+        height: 30px;
+        transition: 0.5s ease-in-out;
+    }
+
+
+    /* Logo*/
+    .nav-logo img {
+        max-height: 100px;
+    }
+
+/* Navigations-Link-Elemente werden ausgeblendet*/
+    .nav-elements ul {
+        width: 100%;
+        position: absolute;
+        top: 130px;
+        right: 0;
+        display: none; /* Unsichtbar Initial */
+        flex-direction: column;
+        text-align:end;
+        z-index: 99;
+    }
+
+    .nav-elements ul.show {
+        display: flex;
+        z-index: 100;
+    }
+
+    .nav-elements ul li {
+        list-style: none;
+        margin-bottom: 20px;
+    }
+
+    .nav-elements ul li a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-size: 18px;
+        border-right: 2px solid black;
+        padding: 10px;
+    }
+
+    .nav-elements ul li a:hover { /* Zurücksetzen des Hover-Effekts auf gleiche fonbt-size da kein Hover auf Smartphone -Störend beim Ausarbeiten und Verwirrend */
+        font-size: 18px;
+    }
+.nav-elements ul{
+    background-color: white;
+    padding: 40px;
+/*   padding-bottom: 2800px; Erstversuch  Hamburger - Hintergrund entfernen bei onclick - Gelöst mit JS  style.overflow -- nun padding-bottom auf 100vh geändert */
+    padding-bottom: 100vh;
+}
+}
+
+
+
+/* RESPONSIVE LAYOUT MENÜ TABLET */
+@media only screen and (min-width: 834px) and (max-width: 1440px) {
+    .nav-elements ul li a {
+        padding: 0 1rem;
+        font-size: 16px;
+    }
+
+    .nav-elements ul li a:hover {
+        font-size: 18px;
+    }
+
+    .nav-logo img {
+        max-height: 100px;
+    }
+}
+
+
+
+
+/*****************************************************************/
+/* SOCIAL MEDIA CONTAINER */
+/*****************************************************************/
+
+.social-media-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    align-items:center;
+    margin: 4rem auto;
+}
+
+
+.social-media {
+    width: 4rem;
+    height: auto;
+    cursor: pointer;
+}
+
+/* RESPONSIVE SOCIALS MOBILE*/
+@media only screen and (max-width: 834px) {
+    .social-media-container {
+        gap: 1rem;
+        margin-bottom: 0;
+        margin-top: 4rem;
+    }
+
+    .social-media {
+        width: 4rem;
+        height: auto;
+    }
+}
+
+
+/* RESPONSIVE SOCIALS TABLET*/
+@media only screen and (min-width: 834px) and (max-width: 1440px) {
+    .social-media-container {
+        gap: 1rem;
+        margin: 2 rem auto;
+    }
+
+    .social-media {
+        width: 6rem;
+        height: auto;
+    }
+}
+
+
+
+
+
+/*****************************************************************/
+/*FOOTER */
+/*****************************************************************/
+
+/*--Footer 2te Ebene--*/
+.footer-2-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right:20px;
+    margin-left: 20px;
+}
+
+.inner-footer-right a {
+    flex-direction: column;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.paragraph-small {
+    font-size: 20px;
+}
+
+#uptotop img{
+    width: 3rem;
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+/* RESPONSIVE MOBILE*/
+@media only screen and (max-width: 834px) {
+    .paragraph-small {
+        font-size: 12px;
+    }
+    .footer-2-container {
+
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+    .inner-footer-right a {
+        padding: 5px;
+    }
+    #uptotop img{
+        width: 2rem;
+        float: right;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* RESPONSIVE TABLET*/
+@media only screen and (min-width: 834px) and (max-width: 1440px) {
+    .footer-2-container {
+        margin-right:10px;
+        margin-left: 10px;
+    }
+    .inner-footer-right a {
+        padding: 5px;
+    }
+    .paragraph-small {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+/*--Footer 1te Ebene--*/
+.footer-1-container {
+    display: flex;
+    flex-direction:row;
+    gap: 80px;
+    margin: 10px;
+    padding:20px;
+}
+
+.inner-footer-2, .inner-footer-3, .inner-footer-4 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+
+.inner-footer-1 img {
+    width: 12rem;
+    height: auto;
+    padding: 20px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.headings-3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+
+
+/* RESPONSIVE MOBILE*/
+@media only screen and (max-width: 834px){
+    .headings-3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    
+    .paragraph-text {
+        text-align: center;
+        margin-top: 5px;
+    }
+    
+    .inner-footer-1 img {
+        width: 6rem;
+        height: auto;
+        display: block;
+    }
+
+    .footer-1-container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding:60px;
+    }
+    .inner-footer-2, .inner-footer-3, .inner-footer-4 {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
+/* RESPONSIVE TABLET*/
+@media only screen and (min-width: 834px) and (max-width: 1440px) {
+    .headings-3 {
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    .inner-footer-1 img {
+        width: 8rem;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .footer-1-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding:60px;
+    }
+
+    .inner-footer-4,
+     .inner-footer-3{
+        margin-top: 4rem;
+    }
+
+    .p-contact-footer {
+        text-align: center;
+    }
+
+    .inner-footer-2, .inner-footer-3, .inner-footer-4 {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
+/*****************************************************************/
+/*NEWSLETTERANMELDUNG - FORM FIELD*/
+/*****************************************************************/
+
+.form-news-general-inside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#news-form-general input{
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+#button-news-general{
+    float: right;
+    color: black;
+    background-color:#83eb71;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.5);
+    padding: 14px 14px;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+}
+
+
+#button-news-general:hover{
+    transform: translateY(-5px);
+    transition: 1s ease-in-out;
+}
+
+
+
+
+/* RESPONSIVE MOBILE*/
+@media only screen and (max-width: 834px){
+    #button-news-general{
+        font-size: 14px;
+        padding: 10px 10px;
+    }
+
+    #news-form-general input{
+        font-size: 16px;
+    }
+
+}
+
+
+/* RESPONSIVE TABLET*/
+@media only screen and (min-width: 834px) and (max-width: 1440px) {
+    #button-news-general{
+        font-size: 16px;
+        padding: 12px 12px;
+
+    }
+
+    #news-form-general input{
+        font-size: 20px;
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    .form-news-general-inside {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 5px;
+    }
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!--head -> Metadaten-->
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Titel der Website (Browserleiste)-->
+    <title>Ernährungsberatung N-Coach Angebotsseite</title>
+    <!-- META-Tags und Keywords zur SEO und Suchmaschinenoptimierung-->
+    <meta name="description" content="Professionelle Ernährungsberatung von N-Coach. Entdecken Sie unsere Angebote, Preise und nützliche Online-Tools für Ihre Gesundheit.">
+    <meta name="keywords" content="Ernährungsberatung, N-Coach, Gesundheit, BMI-Rechner, Kalorienumsatz">
+    <!--Integration Stylesheet für Style-Reset // Menü und Footer == allgemeine universelle Teile der Website die auf jeder Unterseite uniform sind-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--Integration Stylesheet für Haupt-Content-->
+    <link rel="stylesheet" type="text/css" href="style_content.css">
+    <!--Integration Stylesheet für Animationen-->
+    <link rel="stylesheet" type="text/css" href="style_animation.css">
+    <!--Integration Custom Font Urbanist von Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Urbanist:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+</head>
+
+<!--Referenzprototypen: https://www.figma.com/design/EpNcYbKYQRF6bK2N2UK2Wr/Konzept_WebProgrammierung?node-id=0%3A1&t=qgl6HhmTJ96EKTPb-1"-->
+
+<body>
+
+    <header role="banner">
+        <!--Nav-Bar inklusive Logo-->  
+            <nav class="nav-container" aria-label = "Hauptnavigation">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img src="icons/n-coach-logo.png" alt="n-coach-logo">
+                    </a>
+                </div>
+    
+                <a href="#" class="hamburger" aria-label = "Menü öffnen">
+                    <img src="icons/hamburger.png" alt="hamburger-menue-icon">
+                </a>
+    
+                <div class="nav-elements">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ÜBER MICH</a></li>
+                        <li><a href="offers.html" aria-current="page">ANGEBOTE</a></li>
+                        <li><a href="pricelist.html">PREISE</a></li>
+                        <li><a href="blog_apfelmueller.html">BLOG</a></li>
+                        <li><a href="online-tools.html">ONLINE-TOOLS</a></li>
+                        <li><a href="contact.html">KONTAKT</a></li>
+                    </ul>
+                </div>
+            </nav>
+    </header>
+    
+
+    <main role="main">
+        <!--Hero-Section Bild/Illustration-->  
+        <div class="hero-image" id="leistung-hero">
+            <img src="images/header_offers.webp" alt="Titelbild Apfel und Aufstrichbrot zusammen mit einem Maßband auf einem Tisch liegend">
+        </div>
+    
+        <!--Einleitungstext--> 
+        <div class="einleitung">
+            <p class="paragraph-text" id="p-einleitung">Ernährung ist ein lebenslanges Thema und hat einen wesentlichen Einfluss auf unsere Gesundheit.
+                Egal wann, es ist nie zu spät, seine Gewohnheiten zu ändern. Denn: „Was  Hänschen nicht lernt, kann Hans sehr wohl noch lernen.“ 
+                Dabei spielt  weder das Alter eine Rolle, noch brauchen wir auf Genuss zu verzichten. <br> 
+                Hier auf meiner Angebote-Seite findest du einen Überblick über meine Angebote, die darauf abzielen, dich dabei zu  unterstützen, 
+                deine Ernährung zu optimieren, deine Gesundheit zu  verbessern und ein nachhaltigeres Leben zu führen.</p>
+        </div>
+    
+    
+        <!--Überschrift-->
+        <div class="centered_text" aria-labelledby="headings-leistung">
+            <h1 class="headings" id ="headings-leistung">MEIN LEISTUNGSANGEBOT</h1>
+        </div>
+    
+        <!--INHALTSSECTION_1: Bild/Überschrift/Linebreak/Textinhalt/Button-->
+        <div class="offers_container">
+            <div class="offers_innercontent1">
+                <img src="images/offers_image_1.webp" alt="Gemüsezteller, Maßband und Block auf einem Tisch angeordnet">
+            </div>
+            <div class="offers_innercontent2">
+                <h2 class="headings-2">ERNÄHRUNGSBERATUNG</h2>
+                <hr>
+                <p class="paragraph-text">In meiner Ernährungsberatung biete ich eine individuelle und ganzheitliche Herangehensweise, die darauf abzielt, deine Gesundheitsziele zu erreichen und langfristige Veränderungen zu bewirken.
+                    Ich erstelle maßgeschneiderte Ernährungspläne, die auf deine persönlichen Bedürfnisse, Vorlieben und Lebensumstände zugeschnitten sind.
+                    Dabei berücksichtige ich nicht nur deine Ernährungsgewohnheiten, sondern auch dein Lebensstil und deine Ziele. <br>
+                    Durch eine Kombination aus fundiertem Fachwissen, praktischen Tipps und kontinuierlicher Unterstützung helfe ich dir dabei, eine ausgewogene und gesunde Ernährung zu entwickeln, 
+                    die zu dir passt und langfristig umsetzbar ist. <br>
+                    Die Beratung kann sowohl bei dir zuhause, als auch bei mir in der Praxis stattfinden - das ist ganz dir überlassen. Für Beratungen im eigenen Umfeld kann auch die ganze Familie mit einbezogen werden.
+                </p>
+                <a href = "contact.html">
+                    <button class ="offers_button" role="button">ZUM ANGEBOT</button>
+                </a>
+            </div>
+        </div>
+        <!--INHALTSSECTION_2: Bild/Überschrift/Linebreak/Textinhalt/Button-->
+        <div class="offers_container">
+            <div class="offers_innercontent1">
+                <img src="images/offers_image_2.webp" alt="Gefülltes Sandwich mit angelegtem Maßstab um die Dicke zu messen">
+            </div>
+            <div class="offers_innercontent2">
+                <h2 class="headings-2">BIOELEKTRISCHE IMPENDANZANALYSE (BIA) KÖRPERANALYSE</h2>
+                <hr>
+                <p class="paragraph-text"> In meiner Körperanalyse mit Bioelektrischer Impedanzanalyse (BIA) bieten  wir eine umfassende Bewertung deiner Körperzusammensetzung an, die weit  über das bloße Maßnehmen hinausgeht.
+                    Die BIA-Technologie ermöglicht es  uns, präzise Daten über verschiedene Parameter wie Muskelmasse,  Körperfettanteil, Wasserhaushalt und Stoffwechselrate zu erfassen. <br>
+                    Durch  diese detaillierte Analyse erhalten wir einen ganzheitlichen Einblick  in deine Gesundheit und Fitness, 
+                    der es uns ermöglicht, individuelle  Empfehlungen zu entwickeln, die auf deine spezifischen Bedürfnisse  zugeschnitten sind. <br>
+                    Diese Empfehlungen können sowohl  Ernährungsempfehlungen als auch Trainingspläne umfassen, um deine  
+                    Gesundheitsziele effektiv zu erreichen und langfristig zu erhalten. <br>
+                    Unsere Körperanalyse mit BIA ist ein wertvolles Werkzeug, um deine  Fortschritte zu verfolgen und sicherzustellen, dass du auf dem richtigen  Weg zu einem gesünderen und fitteren Lebensstil bist.
+                </p>
+                <a href = "contact.html">
+                    <button class ="offers_button" role="button">ZUM ANGEBOT</button>
+                </a>
+            </div>
+        </div>
+        <!--INHALTSSECTION_3: Bild/Überschrift/Linebreak/Textinhalt/Button-->
+        <div class="offers_container">
+            <div class="offers_innercontent1">
+                <img src="images/offers_image_3.webp" alt="2 Kinder die mit Orangen und Bananen in er Hand Grimassen schneiden">
+            </div>
+            <div class="offers_innercontent2">
+                <h2 class="headings-2">ERNÄHRUNGSBERATUNG SPEZIELL FÜR KINDER UND JUGENDLICHE</h2>
+                <hr>
+                <p class="paragraph-text"> In meiner Ernährungsberatung für Kinder und Jugendliche liegt der Fokus darauf, 
+                    gesunde Essgewohnheiten von klein auf zu fördern und ein solides Fundament für ein gesundes Leben zu legen. <br>
+                    Ich arbeite eng mit Eltern und Kindern zusammen, um eine positive Einstellung gegenüber 
+                    gesunder Ernährung zu entwickeln und praktische Strategien für den Alltag zu finden. <br>
+                    Dabei berücksichtige ich nicht nur die individuellen Bedürfnisse und Vorlieben des Kindes, 
+                    sondern auch seine Entwicklung und Wachstumsphasen. 
+                    Durch spielerische Ansätze, kreative Rezeptideen und altersgerechte Informationen möchte ich Kinder dazu motivieren, 
+                    bewusste Entscheidungen über ihre Ernährung zu treffen und langfristig gesunde Essgewohnheiten zu etablieren. <br>
+                    Zusätzlich biete ich informative Workshops für Eltern und Schulen an, um sie dabei zu unterstützen, ein Umfeld zu schaffen, das gesunde Ernährung fördert und Kinder zu selbstbewussten Essern erzieht. Gemeinsam können wir die 
+                    Grundlagen für eine lebenslange gesunde Lebensweise legen, die Kinder in ihrem Wachstum und ihrer Entwicklung unterstützt.
+                </p>
+                <a href = "contact.html">
+                    <button class ="offers_button" role="button">ZUM ANGEBOT</button>
+                </a>
+            </div>
+        </div>
+        <!--INHALTSSECTION_4: Bild/Überschrift/Linebreak/Textinhalt/Button-->
+        <div class="offers_container">
+            <div class="offers_innercontent1">
+                <img src="images/offers_image_4.webp" alt="Grüner Vekltorhintergrund mit verschiedenen Obst- und Gemüseicons und der Schrift: eat better - feel better voträge">
+            </div>
+            <div class="offers_innercontent2">
+                <h2 class="headings-2">COACHING-VORTRÄGE</h2>
+                <hr>
+                <p class="paragraph-text"> Als erfahrene Ernährungsberaterin und Coach biete ich auch maßgeschneiderte Vorträge 
+                    und Workshops in Schulen, Unternehmen und anderen Organisationen an. <br>
+                    In meinen interaktiven Präsentationen liegt der Fokus darauf, Menschen aller 
+                    Altersgruppen zu motivieren und zu inspirieren, eine gesunde und ausgewogene Ernährung zu praktizieren.
+                    Meine Vorträge sind informativ, unterhaltsam und praxisnah gestaltet und bieten wertvolle 
+                    Einblicke sowie praktische Tipps für den Alltag. <br>
+                    Ich arbeite eng mit den Teilnehmern zusammen, um individuelle Bedürfnisse und Ziele zu identifizieren und ihnen dabei zu helfen, 
+                    positive Veränderungen in ihrem Leben umzusetzen.
+                    Egal ob in Schulen, Unternehmen oder anderen Organisationen - mein Ziel ist es, 
+                    Menschen dabei zu unterstützen, ihre Gesundheit zu verbessern und ein bewusstes und erfülltes Leben zu führen.
+                </p>
+                <a href = "contact.html">
+                    <button class ="offers_button" role="button">ZUM ANGEBOT</button>
+                </a>
+            </div>
+        </div>
+    
+    
+        <!--CTA-Containerelement mit Hintergrund/Überschrift und Button-->
+        <div class="CTA-container">
+            <p class="angebotstext">“Die beste Medizin ist eine ausgewogene Ernährung” -Mahatma Gandhi-</p>
+            <a href = "contact.html">
+                <button class="button-cta" role="button">JETZT KONTAKT AUFNEHMEN</button>
+            </a>
+        </div>
+
+
+        <!--Social-Media Icons-->
+        <!-- noopener und noreffer Integration um Sicherheit zu gewährleisten indem eink neuer Tab geöffnet wird bei Klick des Links und verhindert
+         damit dass die Seite mit window.opener direkt auf der Seite geöffnet wird was ein potentielles Sicherheitsrisiko darstellt - kann zudem Performance verbessern-->
+         <div class="social-media-container" aria-label="Social Media Links">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <img class="social-media" src="icons/facebook_icon.png" alt="Facebook Icon">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <img class="social-media" src="icons/instagram_icon.png" alt="Instagram Icon">
+            </a>
+            <a href="https://at.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <img class="social-media" src="icons/linkedin_icon.png" alt="LinkedIn Icon">
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="Youtube">
+                <img class="social-media" src="icons/youtube_icon.png" alt="Youtube Icon">
+            </a>
+        </div>
+    </main>
+
+<!--Footer 1te Ebene mit Logo/Kontakt/Kontakt-CTA/Newsletteranmeldung-->
+    <footer>
+        <div class="footer-1-container">
+            <div class="inner-footer-1">
+                <img src="icons/n-coach-logo-small.png" alt="N-Coach Logo Kleinformat">
+            </div>
+            <div class="inner-footer-2">
+                <h3 class="headings-3">KONTAKT</h3>
+                <p class="paragraph-text p-contact-footer">Email: samantha@n-coach.at <br> Adresse: Habelberg 1 <br> 0000 Herzösterreich <br>Telefon: 0043/1234567
+                </p>
+            </div>
+            <div class="inner-footer-3">
+                <h3 class="headings-3">JETZT KONTAKT AUFNEHMEN</h3>
+                <p class="paragraph-text">Du hast Fragen oder möchtest einen Termin buchen? Ich bin für Anfragen jederzeit verfügbar.
+                </p>
+                <a href = "contact.html">
+                    <button class="button-cta" role="button">ZUM KONTAKTFORMULAR</button>
+                </a>
+            </div>
+            <div class="inner-footer-4">
+                <h3 class="headings-3">NEWSLETTERANMELDUNG</h3>
+                <p class="paragraph-text">Jetzt für den Newsletter eintragen und keine News mehr verpassen!
+                </p>
+                <form id="news-form-general" action="send.php" method="post" aria-label = "Newsletter-Anmeldung">
+                    <div class = "form-news-general-inside">
+                        <input type="email" name="email" placeholder="Deine Mail..." required aria-label="Email eingeben">
+                        <button id="button-news-general" type="submit" alt="Absenden">ANMELDEN</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!--Footer 2te Ebene-->
+        <div class="footer-2-container">
+            <div class="inner-footer-left">
+                <p class="paragraph-small">Copyright Julian Fritz 2024</p>
+            </div>
+            <div class="inner-footer-right">
+                <a class="paragraph-small" href="#" aria-label="Allgemeine Geschäftsbedingungen">AGB</a>
+                <a class="paragraph-small" href="#" aria-label="Impressum">Impressum</a>
+                <a class="paragraph-small" href="#" aria-label="Datenschutzerklärung">Datenschutz</a>
+            </div>
+        </div>
+        <!--Up-To-Top-Button-->
+        <a id="uptotop" href="#" aria-label="Nach oben scrollen">
+            <img src="icons/up_to_top_icon.png" alt="Up-to-Top-Button">
+        </a>
+    </footer>
+
+    <!--Javascript-Einbindung-->
+    <script src="app.js"></script>
+</body>
+</html>

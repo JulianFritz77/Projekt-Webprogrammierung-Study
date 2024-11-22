@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<!--head -> Metadaten-->
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Titel der Website (Browserleiste)-->
+    <title>Ernährungsberatung N-Coach Apfelmüller`s Blog</title>
+    <!-- META-Tags und Keywords zur SEO und Suchmaschinenoptimierung-->
+    <meta name="description" content="Professionelle Ernährungsberatung von N-Coach. Entdecken Sie unsere Angebote, Preise und nützliche Online-Tools für Ihre Gesundheit.">
+    <meta name="keywords" content="Ernährungsberatung, N-Coach, Gesundheit, BMI-Rechner, Kalorienumsatz">
+    <!--Integration Stylesheet für Style-Reset // Menü und Footer == allgemeine universelle Teile der Website die auf jeder Unterseite uniform sind-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--Integration Stylesheet für Haupt-Content-->
+    <link rel="stylesheet" type="text/css" href="style_content.css">
+    <!--Integration Stylesheet für Animationen-->
+    <link rel="stylesheet" type="text/css" href="style_animation.css">
+    <!--Integration Custom Font Urbanist von Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Urbanist:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+</head>
+
+<!--Referenzprototypen: https://www.figma.com/design/EpNcYbKYQRF6bK2N2UK2Wr/Konzept_WebProgrammierung?node-id=0%3A1&t=qgl6HhmTJ96EKTPb-1"-->
+
+<body>
+
+    <header role="banner">
+        <!--Nav-Bar inklusive Logo-->  
+            <nav class="nav-container" aria-label = "Hauptnavigation">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img src="icons/n-coach-logo.png" alt="n-coach-logo">
+                    </a>
+                </div>
+    
+                <a href="#" class="hamburger" aria-label = "Menü öffnen">
+                    <img src="icons/hamburger.png" alt="hamburger-menue-icon">
+                </a>
+    
+                <div class="nav-elements">
+                    <ul>
+                        <li><a href="index.html" >HOME</a></li>
+                        <li><a href="about.html">ÜBER MICH</a></li>
+                        <li><a href="offers.html">ANGEBOTE</a></li>
+                        <li><a href="pricelist.html">PREISE</a></li>
+                        <li><a href="blog_apfelmueller.html" aria-current="page">BLOG</a></li>
+                        <li><a href="online-tools.html">ONLINE-TOOLS</a></li>
+                        <li><a href="contact.html">KONTAKT</a></li>
+                    </ul>
+                </div>
+            </nav>
+    </header>
+    
+
+
+    <main role="main">
+        <!--Hero-Section Bild-->  
+        <div class="hero-image">
+            <img src="images/header_blog.webp" alt="Titelbild 2 Hände halten ein grünes Herz">
+        </div>
+    
+        <!--Suchleiste--> 
+        <div class="suchleiste-div">
+            <form id="suchleiste" onsubmit="return false;" aria-label="Blogbeiträge suchen">
+                <img src="icons/icon_suche.png" alt="suchicon" class="icon">
+                <input type="search" id="search" name="search" placeholder="Ich suche...." aria-label="Suche eingeben">
+                <button id="submit-data" type="submit">
+                    <img id="searchbar-submit" src="icons/icon-search-right.png" alt="Suche">
+                </button>
+            </form>
+        </div>
+    
+        <!--Überschrift Blog-->
+        <div class = "centered_text" aria-labelledby = "head">
+            <h1 class="headings" id="head">MEIN ERNÄHRUNGSBLOG</h1>
+        </div>
+    
+        <div class = "content-div-blog">
+        <!--Strukturierung in 2 Sections für Maincontent und Sidebar--> 
+            <section id = "blog-posts-container" data-page="1" class="maincontent">
+                    <!--MAINCONTENT--> 
+                    <div class = "content-div-inner-row">
+                        <!--Einzelner Blogbeitrag Nummer 1--> 
+                        <div class="blogbeitrag_outer" aria-labelledby="blogbeitrag1">
+                            <h2 class="headings-2" id="blogbeitrag1">ROTER SMOOTHIE - Warum er so gesund ist!</h2>
+                            <p class="blogdate">30.Mai 2024</p>
+                            <img class="blogimage" src="images/blogimage_1.webp" alt="Heidelbeeren und Himbeeren in einer Schale">
+                            <p class="paragraph-text">Wussten Sie, dass Beeren als gesündeste Obstsorte überhaupt betrachtet  werden? 
+                            Je dunkler die Beeren, desto reicher an Antioxidantien sind sie,  welche den Körper vor freien Radikalen schützen. 
+                            Sie stecken voller  Vitamine und Mineralstoffe und weisen zudem einen relativ geringen  Zuckergehalt auf. 
+                            Das hat wiederum sehr positive Auswirkungen auf den  Blutzuckerspiegel. Enthalten sind neben den Vitaminen 
+                            C, E, Selen und Zink auch die in den Beeren enthaltende Anthozyane.
+                            </p>
+                            <div class = "icon-button-row">
+                                <svg id = "heart" class = "unlike" viewBox="0 0 24 24"  stroke="currentColor" aria-label="Herz-Symbol">
+                                    <path stroke-linecap="round" stroke-linejoin="round" 
+                                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                </svg>
+                                <svg id = "share" class = "unshare"
+                                    fill = "none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-label="Teilen-Symbol">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z" />
+                                </svg>
+                            </div>
+                            <a href= "blog_einzelpost_1.html"><button class="button-cta" aria-label="Mehr lesen">MEHR LESEN</button></a>
+                        </div>
+    
+                        <!--Einzelner Blogbeitrag Nummer 2--> 
+                        <div class="blogbeitrag_outer" aria-labelledby="blogbeitrag2">
+                            <h2 class="headings-2" id="blogbeitrag2">Ernährung für Laufsportler - die Mischung macht`s aus!</h2>
+                            <p class="blogdate">14.Mai 2024</p>
+                            <img class="blogimage" src="images/blogimage_2.webp" alt="Laufsportler bei einem Rennen auf der Straße">
+                            <p class="paragraph-text">Hätte man großartige Läufer*innen früher nach ihrem Geheimrezept  gefragt,
+                            hätte die Antwort „Training, Training, Training“ gelautet.  Mittlerweile ist bekannt, 
+                            dass man viel mehr tun kann – Stichwort: „Iss  was G’scheits!“ Denn eine gesunde und ausgewogene Ernährung 
+                            ist das A und O für Ihre Leistung und Regeneration. Grundsätzlich  decken Sie damit den Nährstoffbedarf Ihres Körpers ab, 
+                            auch bei mäßigem  Sportpensum. Die ideale Ernährung für Ausdauersportler setzt sich aus rund....
+                            </p>
+                            <div class = "icon-button-row">
+                                <a href="#">
+                                    <svg id = "heart" class = "unlike" viewBox="0 0 24 24"  stroke="currentColor" aria-label="Herz-Symbol">
+                                        <path stroke-linecap="round" stroke-linejoin="round" 
+                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                    </svg>
+                                    <svg id = "share" class = "unshare"
+                                        fill = "none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-label="Teilen-Symbol">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z" />
+                                    </svg>    
+                            </div>
+                            <a href= "blog_einzelpost_2.html"><button class="button-cta" aria-label="Mehr lesen">MEHR LESEN</button></a>
+                        </div>
+                    </div>
+    
+                    <div class = "content-div-inner-row">
+                        <!--Einzelner Blogbeitrag Nummer 3--> 
+                        <div class="blogbeitrag_outer" aria-labelledby="blogbeitrag3">
+                            <h2 class="headings-2" id="blogbeitrag3">Müsli selber machen - 2 schnelle und gesunde Rezepte!</h2>
+                            <p class="blogdate">17.April 2024</p>
+                            <img class="blogimage" src="images/blogimage_3.webp" alt="Tasse gefüllt mit Müsli, danebenliegend Getreideähren">
+                            <p class="paragraph-text">Wer etwas Abwechslung zur fertigen Müslimischung sucht, 
+                                unter Allergien  leidet oder auf Zucker verzichten will, kann Müsli auch einfach selber  machen. 
+                                Wir zeigen Ihnen zwei unkomplizierte Rezepte. Ohne  eine Schale Müsli starten viele nicht – oder nur äußerst ungern – 
+                                in  den Tag. Und das ist auch sinnvoll, denn Müsli liefert Energie und macht  lange satt: In den Getreideflocken stecken 
+                                Ballaststoffe, Kohlenhydrate und wichtige ungesättigte Fettsäuren.
+                                Eine gute Alternative, für mehr Kontrolle über die Zutaten: Müsli selber machen.......
+                            </p>
+                            <div class = "icon-button-row">
+                                <svg id = "heart" class = "unlike" viewBox="0 0 24 24"  stroke="currentColor" aria-label="Herz-Symbol">
+                                    <path stroke-linecap="round" stroke-linejoin="round" 
+                                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                  </svg>
+                                  <svg id = "share" class = "unshare"
+                                  fill = "none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-label="Teilen-Symbol">
+                                      <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z" />
+                                    </svg>
+                            </div>
+                            <a href= "blog_einzelpost_3.html"><button class="button-cta" aria-label="Mehr lesen">MEHR LESEN</button></a>
+                        </div>
+    
+    
+                        <!--Einzelner Blogbeitrag Nummer 4--> 
+                        <div class="blogbeitrag_outer" aria-labelledby="blogbeitrag4">
+                            <h2 class="headings-2" id="blogbeitrag4">Frühstücksideen für Kinder und Jugendliche</h2>
+                            <p class="blogdate">10.März 2024</p>
+                            <img class="blogimage" src="images/blogimage_4.webp" alt="Obst- und Getreidesorten auf einem Tisch angeordnet">
+                            <p class="paragraph-text">Kinderfrühstück muss nicht immer gleich die altbekannte Stulle oder die  
+                            ungesunden Cornflakes bedeuten. Wie wäre es zum Beispiel mal mit  Erdbeer Porridge? Oder mit etwas 
+                            Herzhaftem wie  Rührei Muffins?  Die lassen sich auch schon perfekt am Vorabend zubereiten, wenn es mal  
+                            schnell gehen muss. Ich habe für euch hier einige super leckere und einfach zuzubereitende Rezepte zusammengestellt- 
+                            die jedem Kind eine Freude bereiten. Erdbeer-Porridge: Für 4 Portionen benötigt ihr..........
+                            </p>
+                        <div class = "icon-button-row">
+                            <svg id = "heart" class = "unlike" viewBox="0 0 24 24"  stroke="currentColor" aria-label="Herz-Symbol">
+                                <path stroke-linecap="round" stroke-linejoin="round" 
+                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                            </svg>
+                            <svg id = "share" class = "unshare"
+                                fill = "none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-label="Teilen-Symbol">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z" />
+                            </svg>
+                        </div>
+                        <a href= "blog_einzelpost_4.html"><button class="button-cta" aria-label="Mehr lesen">MEHR LESEN</button></a>
+                    </div>
+                </div>
+            </section>
+    
+    
+    <!-- CONTENT MAIN - VERSTECKTER TEIL ON LOAD - PAGE 2-->
+        <section id = "blog-posts-container" data-page="2" class="maincontent">
+            <div class = "content-div-inner-row">
+                <!--Einzelner Blogbeitrag Nummer 5--> 
+                <div class="blogbeitrag_outer" aria-labelledby="blogbeitrag5">
+                        <h2 class="headings-2" id="blogbeitrag5">Nudeln machen nicht dich - unter bestimmten Bedingungen</h2>
+                        <p class="blogdate">15.Februar 2024</p>
+                        <img class="blogimage" src="images/blog_image_5.webp" alt="Zubereitung von Pasta">
+                        <p class="paragraph-text">Kartoffeln, Reis, Nudeln, Backwaren sollte man tunlichst vermeiden,
+                        wenn man gesund leben, sein Gewicht halten oder vielleicht sogar noch abnehmen möchte.
+                        Laut Studien kann man das so allgemein wohl nicht fassen. Sie konnten nämlich zeigen, 
+                        dass Nudeln gar nicht unbedingt dick machen müssen und auch weniger gesundheitsschädlich sind als vermutet.
+                        Aber eins vorweg: Das heißt jetzt nicht, dass nun ohne jedes schlechte Gewissen ständig Pasta geschlemmt werden kann.
+                        </p>
+                    <div class = "icon-button-row">
+                            <svg id = "heart" class = "unlike" viewBox="0 0 24 24"  stroke="currentColor" aria-label="Herz-Symbol">
+                                <path stroke-linecap="round" stroke-linejoin="round" 
+                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                        <svg id = "share" class = "unshare"
+                            fill = "none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-label="Teilen-Symbol">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z" />
+                        </svg>
+                    </div>
+                    <a href= "blog_einzelpost_5.html"><button class="button-cta" aria-label="Mehr lesen">MEHR LESEN</button></a>
+                </div>
+        
+                <!--Einzelner Blogbeitrag Nummer 6--> 
+                <div class="blogbeitrag_outer"  aria-labelledby="blogbeitrag6">
+                    <h2 class="headings-2" id="blogbeitrag6">Ausgewogene Ernährung - das sind die Grundlagen</h2>
+                    <p class="blogdate">14.Februar 2024</p>
+                    <img class="blogimage" src="images/blog_image_6.webp" alt="Verschiedene gesunde Lebensmittel die mit einer Hantel auf einem weißen Untergrund platziert sind">
+                    <p class="paragraph-text">In der Hektik des Alltags kann es eine echte
+                        Herausforderung sein, den Überblick über eine gesunde und ausgewogene Ernährung zu behalten.
+                        Zwischen schnellen Snacks und Fertiggerichten verlieren wir oft den Fokus darauf,
+                        was unserem Körper wirklich guttut. Doch was bedeutet es eigentlich, sich ausgewogen zu ernähren? Wir geben dir
+                        hierzu hilfreiche Tipps, Tricks und Wissen mit auf den Weg damit  du zukünftig ein Profi auf dem Gebiet der Ernährung bist - unter mehr lesen findest du genaueres zum Thema
+                    </p>
+                    <div class = "icon-button-row">
+                        <svg id = "heart" class = "unlike" viewBox="0 0 24 24"  stroke="currentColor" aria-label="Herz-Symbol">
+                            <path stroke-linecap="round" stroke-linejoin="round" 
+                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                        <svg id = "share" class = "unshare"
+                            fill = "none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-label="Teilen-Symbol">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z" />
+                        </svg>
+                    </div>
+                    <a href= "blog_einzelpost_6.html"><button class="button-cta" aria-label="Mehr lesen">MEHR LESEN</button></a>
+                </div>
+            </div>
+        </section>
+    
+            <section class="sidebar" role="complementary">
+            <!--SIDEBAR CONTENT--> 
+                <h2 class="headings-2">BELIEBTE BEITRÄGE</h2>
+                <div class="favourites_outer">
+                    <h2 class="blog_favourites">Grüner Smoothie - Wunderwaffe?</h2>
+                    <h2 class="blog_favourites">Wetter Belastungen für den Kreislauf</h2>
+                    <h2 class="blog_favourites">Ernährung für Laufsportler</h2>
+                    <h2 class="blog_favourites">Frühstücksideen für Kinder und Jugendliche</h2>
+                 </div>
+    
+                <h2 class="headings-2">FOLGE MIR AUF SOCIAL MEDIA UND BLEIB IMMER UP-TO-DATE</h2>
+                <!--Social-Buttons in kleinerer Größe--> 
+                    <div class="social-media-container-small" aria-label = "Social-Media-Links">
+                        <a href="https://www.facebook.com/" aria-label="Facebook">
+                            <img class="social-media" src="icons/facebook_icon.png" alt="facebook-icon">
+                        </a>
+                        <a href="https://www.instagram.com/" aria-label="Instagram">
+                            <img class="social-media" src="icons/instagram_icon.png" alt="instagram-icon">
+                        </a>
+                        <a href="https://at.linkedin.com/" aria-label="LinkedIn">
+                            <img class="social-media" src="icons/linkedin_icon.png" alt="linkedin-icon">
+                        </a>
+                        <a href="https://www.youtube.com/" aria-label="Youtube">
+                            <img class="social-media" src="icons/youtube_icon.png" alt="youtube-icon">
+                        </a>
+                    </div>
+    
+                    <div class = "news-sidebar-container" aria-labelledby="headnews">
+                        <h2 class="headings-2" id="headnews">NEWSLETTERANMELDUNG</h2>
+                        <p class="paragraph-small">Jetzt für den Newsletter eintragen und keine News mehr verpassen!</p>
+                        <!--Newsletteranmeldung--> 
+                        <form id = "newsletter_sidebar" action="send.php" method="post">
+                            <input type="email" name="email" placeholder="Deine Mail..." required aria-label="Email-eingeben">
+                            <button class = "button-news-side button-cta" role="button" type ="submit" alt="Absenden">ANMELDEN</button>
+                        </form>
+                    </div>
+            </section>
+        </div>
+        
+        <!--PAGINATION Navigation Bottom-Leiste zum weiterklicken durch die Blogseiten - //-->
+        <div class="seitenwechsel" aria-label="Seitenwechsel">
+            <span><a class="page-number active" href="#">1</a></span>
+            <span><a class="page-number" href="#">2</a></span>
+            <span><a id="weiter-btn"  href="#">
+                &laquo; Nächste Seite
+                &raquo;</a></span>
+        </div>
+    
+        <!--CTA-Containerelement mit Hintergrund/Überschrift und Button-->
+        <div class="CTA-container">
+            <p class="angebotstext">“Essen und Trinken hält Leib und Seele zusammen” -Sokrates-</p>
+            <a href = "contact.html">
+                <button class="button-cta" role="button">JETZT KONTAKT AUFNEHMEN</button>
+           </a>
+        </div>
+    
+        <!--Social-Media Icons-->
+        <!-- noopener und noreffer Integration um Sicherheit zu gewährleisten indem eink neuer Tab geöffnet wird bei Klick des Links und verhindert
+         damit dass die Seite mit window.opener direkt auf der Seite geöffnet wird was ein potentielles Sicherheitsrisiko darstellt - kann zudem Performance verbessern-->
+         <div class="social-media-container" aria-label="Social Media Links">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <img class="social-media" src="icons/facebook_icon.png" alt="Facebook Icon">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <img class="social-media" src="icons/instagram_icon.png" alt="Instagram Icon">
+            </a>
+            <a href="https://at.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <img class="social-media" src="icons/linkedin_icon.png" alt="LinkedIn Icon">
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="Youtube">
+                <img class="social-media" src="icons/youtube_icon.png" alt="Youtube Icon">
+            </a>
+        </div>
+    </main>
+
+<!--Footer 1te Ebene mit Logo/Kontakt/Kontakt-CTA/Newsletteranmeldung-->
+    <footer>
+        <div class="footer-1-container">
+            <div class="inner-footer-1">
+                <img src="icons/n-coach-logo-small.png" alt="N-Coach Logo Kleinformat">
+            </div>
+            <div class="inner-footer-2">
+                <h3 class="headings-3">KONTAKT</h3>
+                <p class="paragraph-text p-contact-footer">Email: samantha@n-coach.at <br> Adresse: Habelberg 1 <br> 0000 Herzösterreich <br>Telefon: 0043/1234567
+                </p>
+            </div>
+            <div class="inner-footer-3">
+                <h3 class="headings-3">JETZT KONTAKT AUFNEHMEN</h3>
+                <p class="paragraph-text">Du hast Fragen oder möchtest einen Termin buchen? Ich bin für Anfragen jederzeit verfügbar.
+                </p>
+                <a href = "contact.html">
+                    <button class="button-cta" role="button">ZUM KONTAKTFORMULAR</button>
+                </a>
+            </div>
+            <div class="inner-footer-4">
+                <h3 class="headings-3">NEWSLETTERANMELDUNG</h3>
+                <p class="paragraph-text">Jetzt für den Newsletter eintragen und keine News mehr verpassen!
+                </p>
+                <form id="news-form-general" action="send.php" method="post" aria-label = "Newsletter-Anmeldung">
+                    <div class = "form-news-general-inside">
+                        <input type="email" name="email" placeholder="Deine Mail..." required aria-label="Email eingeben">
+                        <button id="button-news-general" type="submit" alt="Absenden">ANMELDEN</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!--Footer 2te Ebene-->
+        <div class="footer-2-container">
+            <div class="inner-footer-left">
+                <p class="paragraph-small">Copyright Julian Fritz 2024</p>
+            </div>
+            <div class="inner-footer-right">
+                <a class="paragraph-small" href="#" aria-label="Allgemeine Geschäftsbedingungen">AGB</a>
+                <a class="paragraph-small" href="#" aria-label="Impressum">Impressum</a>
+                <a class="paragraph-small" href="#" aria-label="Datenschutzerklärung">Datenschutz</a>
+            </div>
+        </div>
+        <!--Up-To-Top-Button-->
+        <a id="uptotop" href="#" aria-label="Nach oben scrollen">
+            <img src="icons/up_to_top_icon.png" alt="Up-to-Top-Button">
+        </a>
+    </footer>
+
+    <!--Javascript-Einbindung-->
+    <script src="app.js"></script>
+    <script src="blog.js"></script>
+</body>
+</html>
